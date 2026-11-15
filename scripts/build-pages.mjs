@@ -21,18 +21,18 @@ const NAV = [
 const LEGAL = [['Company information', 'legal/company-information.html'], ['Privacy', 'legal/privacy.html'], ['Security', 'legal/security.html'], ['Complaints', 'legal/complaints.html']];
 
 /* ---------- shared partials ---------- */
-function head({ title, desc, theme = 'dark' }) {
+function head({ title, desc, theme = 'dark', b = '' }) {
   return `<!doctype html>
 <html lang="en" data-theme="${theme}">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>${esc(title)} | KKS Insurance Services</title>
   <meta name="description" content="${esc(desc)}" />
   <meta property="og:title" content="${esc(title)} | KKS Insurance Services" />
   <meta property="og:description" content="${esc(desc)}" />
   <meta name="theme-color" content="#12121a" />
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="${b}favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
@@ -66,11 +66,11 @@ function header(b, cur, home = false) {
       <a class="phone" href="tel:${SITE.tel}"><span class="dot" aria-hidden="true"></span>${SITE.phone}</a>
       <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
     </div>
-    <div class="mobile-menu" id="mobile-menu" hidden>
+    <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Site menu" hidden>
       <ul>
         <li><a href="${homeHref}">Home</a></li>
         <li>
-          <button class="m-drop-btn" aria-expanded="false" aria-controls="m-svc">Services <span aria-hidden="true">▾</span></button>
+          <button class="m-drop-btn" aria-expanded="false" aria-controls="m-svc">Services <span class="chev" aria-hidden="true">▾</span></button>
           <div class="m-svc" id="m-svc" hidden>${svcLinks(b, curSvc)}</div>
         </li>
         ${NAV.map(item).join('\n        ')}
@@ -112,7 +112,7 @@ function footer(b, home = false) {
     <div class="giant serif" aria-hidden="true">KKS<em>insurance</em></div>
     <div class="wrap legal">
       <p>Preview build: names, phone, email, addresses, reviews, case studies and logos are placeholders.</p>
-      <p>${LEGAL.map(([n, u]) => `<a href="${b}${u}">${n}</a>`).join(' · ')}</p>
+      <p class="legal-links">${LEGAL.map(([n, u]) => `<a href="${b}${u}">${n}</a>`).join('<span aria-hidden="true"> · </span>')}</p>
       <p>© <span data-year>2026</span> KKS Insurance Services. All rights reserved.</p>
     </div>
   </footer>
@@ -189,7 +189,7 @@ function stat([to, suf, label, pre = ''], cls = '') {
 
 function page({ file, title, desc, body, theme }) {
   const depth = file.split('/').length - 1, b = '../'.repeat(depth);
-  const html = `${head({ title, desc, theme })}
+  const html = `${head({ title, desc, theme, b })}
 <body class="inner" data-page="${file.replace(/\.html$/, '').replace(/\//g, '-')}">
   <a class="skip" href="#main">Skip to content</a>
 
@@ -201,7 +201,7 @@ function page({ file, title, desc, body, theme }) {
 
   ${footer(b)}
 
-  <script type="module" src="/src/page.js"></script>
+  <script type="module" src="${b}src/page.js"></script>
 </body>
 </html>
 `;
@@ -246,7 +246,7 @@ SERVICES.forEach((s, idx) => {
         <dl class="st-row">${s.stats.map((x) => stat(x)).join('')}</dl>
         <div class="deliver-grid">
           <div class="dcard" data-reveal><p class="mono">Deliverables</p><ul class="checklist">${s.deliver.map((d) => `<li>${esc(d)}</li>`).join('')}</ul></div>
-          <div class="dcard dark" data-reveal><p class="mono">Service levels (sample)</p><table class="tbl"><thead><tr><th scope="col">Task</th><th scope="col">Standard</th><th scope="col">Rush</th></tr></thead><tbody>${s.steps.map(([st], i) => `<tr><td>${esc(st)}</td><td>${['Same day', '4 h', '1 business day', '2 business days'][i % 4]}</td><td>${['1 h', '2 h', '4 h', 'Same day'][i % 4]}</td></tr>`).join('')}</tbody></table><p class="small muted">Turnaround targets are placeholders for this preview.</p></div>
+          <div class="dcard dark" data-reveal><p class="mono">Service levels (sample)</p><table class="tbl stack" role="table"><thead role="rowgroup"><tr role="row"><th scope="col" role="columnheader">Task</th><th scope="col" role="columnheader">Standard</th><th scope="col" role="columnheader">Rush</th></tr></thead><tbody role="rowgroup">${s.steps.map(([st], i) => `<tr role="row"><th scope="row" role="rowheader">${esc(st)}</th><td role="cell" data-label="Standard">${['Same day', '4 h', '1 business day', '2 business days'][i % 4]}</td><td role="cell" data-label="Rush">${['1 h', '2 h', '4 h', 'Same day'][i % 4]}</td></tr>`).join('')}</tbody></table><p class="small muted">Turnaround targets are placeholders for this preview.</p></div>
         </div>
       </div>
     </section>
@@ -357,7 +357,7 @@ page({
     <section class="sec" data-theme="dark">
       <div class="wrap">
         <div class="head-split"><p class="mono label">The Comparison</p>${h2('In-House, Freelancer,', 'or KKS?')}</div>
-        <div class="tbl-wrap" data-reveal><table class="tbl big"><thead><tr><th scope="col"></th><th scope="col">In-house hire</th><th scope="col">Solo freelancer</th><th scope="col" class="hl">KKS team</th></tr></thead><tbody>${COMPARE.map((r) => `<tr><th scope="row">${esc(r[0])}</th>${r.slice(1).map((c, i) => `<td${i === 2 ? ' class="hl"' : ''}>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>
+        <div class="tbl-wrap" data-reveal><table class="tbl big stack" role="table"><thead role="rowgroup"><tr role="row"><th scope="col" role="columnheader"><span class="sr-only">Factor</span></th><th scope="col" role="columnheader">In-house hire</th><th scope="col" role="columnheader">Solo freelancer</th><th scope="col" role="columnheader" class="hl">KKS team</th></tr></thead><tbody role="rowgroup">${COMPARE.map((r) => `<tr role="row"><th scope="row" role="rowheader">${esc(r[0])}</th>${r.slice(1).map((c, i) => `<td role="cell" data-label="${['In-house hire', 'Solo freelancer', 'KKS team'][i]}"${i === 2 ? ' class="hl"' : ''}>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>
         <p class="small muted">Illustrative comparison for this preview.</p>
       </div>
     </section>
@@ -415,7 +415,7 @@ page({
       <div class="wrap">
         <div class="head-split"><p class="mono label">Open Roles</p>${h2('Find Your', 'Next Role')}</div>
         <div class="role-filters">
-          <label class="search"><span class="sr-only">Search roles</span><input type="search" placeholder="Search roles" data-role-search /></label>
+          <label class="search"><span class="sr-only">Search roles</span><input type="search" placeholder="Search roles" enterkeyhint="search" autocomplete="off" data-role-search /></label>
           <label><span class="sr-only">Team</span><select data-role-f="1"><option value="">All teams</option>${uniq(1).map((t) => `<option>${esc(t)}</option>`).join('')}</select></label>
           <label><span class="sr-only">Shift</span><select data-role-f="2"><option value="">All shifts</option>${uniq(2).map((t) => `<option>${esc(t)}</option>`).join('')}</select></label>
           <label><span class="sr-only">Type</span><select data-role-f="3"><option value="">All types</option>${uniq(3).map((t) => `<option>${esc(t)}</option>`).join('')}</select></label>
@@ -430,9 +430,9 @@ page({
       <div class="wrap form-wrap">
         <div><p class="mono label">Apply</p>${h2('Send Us Your', 'Application')}<p class="lead">This is a demo form for the preview build. Nothing is uploaded or sent.</p><p class="small muted">Prefer email? Write to <a href="mailto:${SITE.careersEmail}">${SITE.careersEmail}</a> (placeholder).</p></div>
         <form class="kform" data-form="apply" novalidate>
-          <div class="frow"><label>Full name *<input name="name" required autocomplete="name" /></label><label>Email *<input name="email" type="email" required autocomplete="email" /></label></div>
-          <div class="frow"><label>Phone<input name="phone" type="tel" autocomplete="tel" placeholder="Optional" /></label><label>Role *<select name="role" required><option value="">Choose a role</option>${ROLES.map((r) => `<option>${esc(r[0])}</option>`).join('')}</select></label></div>
-          <div class="frow"><label>Experience *<select name="exp" required><option value="">Select</option><option>Fresher</option><option>Under 1 year</option><option>1–3 years</option><option>3–5 years</option><option>5+ years</option></select></label><label>LinkedIn profile<input name="url" type="url" placeholder="https://" /></label></div>
+          <div class="frow"><label>Full name *<input name="name" required autocomplete="name" autocapitalize="words" enterkeyhint="next" /></label><label>Email *<input name="email" type="email" inputmode="email" required autocomplete="email" autocapitalize="off" spellcheck="false" /></label></div>
+          <div class="frow"><label>Phone<input name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="Optional" /></label><label>Role *<select name="role" required><option value="">Choose a role</option>${ROLES.map((r) => `<option>${esc(r[0])}</option>`).join('')}</select></label></div>
+          <div class="frow"><label>Experience *<select name="exp" required><option value="">Select</option><option>Fresher</option><option>Under 1 year</option><option>1–3 years</option><option>3–5 years</option><option>5+ years</option></select></label><label>LinkedIn profile<input name="url" type="url" inputmode="url" autocomplete="url" autocapitalize="off" spellcheck="false" placeholder="https://" /></label></div>
           <label class="file">Resume (PDF or DOC) *<input name="resume" type="file" accept=".pdf,.doc,.docx" required /><span class="file-ui"><b>Choose a file</b> or drop it here</span></label>
           <label>Why KKS?<textarea name="msg" rows="4" placeholder="A few lines about you"></textarea></label>
           <label class="check"><input type="checkbox" name="consent" required /> I agree to be contacted about this application *</label>
@@ -516,7 +516,7 @@ page({
     <section class="sec" data-theme="dark">
       <div class="wrap">
         <div class="head-split"><p class="mono label">Compare Plans</p>${h2('Everything Side', 'by Side')}</div>
-        <div class="tbl-wrap" data-reveal><table class="tbl big"><thead><tr><th scope="col">Feature</th>${PLANS.map((p) => `<th scope="col"${p.tag === 'Most popular' ? ' class="hl"' : ''}>${p.n}</th>`).join('')}</tr></thead><tbody>${CMP.map((r) => `<tr><th scope="row">${esc(r[0])}</th>${r.slice(1).map((v, i) => `<td${i === 1 ? ' class="hl"' : ''}>${cell(v)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>
+        <div class="tbl-wrap" data-reveal><table class="tbl big stack" role="table"><caption class="sr-only">Plan comparison</caption><thead role="rowgroup"><tr role="row"><th scope="col" role="columnheader">Feature</th>${PLANS.map((p) => `<th scope="col" role="columnheader"${p.tag === 'Most popular' ? ' class="hl"' : ''}>${p.n}</th>`).join('')}</tr></thead><tbody role="rowgroup">${CMP.map((r) => `<tr role="row"><th scope="row" role="rowheader">${esc(r[0])}</th>${r.slice(1).map((v, i) => `<td role="cell" data-label="${PLANS[i].n}"${i === 1 ? ' class="hl"' : ''}>${cell(v)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>
       </div>
     </section>
     ${faq([
@@ -570,8 +570,8 @@ page({
     <section class="sec contact-sec" data-theme="cream" id="form">
       <div class="wrap form-wrap light">
         <form class="kform" data-form="contact" novalidate>
-          <div class="frow"><label>Full name *<input name="name" required autocomplete="name" /></label><label>Work email *<input name="email" type="email" required autocomplete="email" /></label></div>
-          <div class="frow"><label>Phone<input name="phone" type="tel" autocomplete="tel" placeholder="Optional" /></label><label>Agency name *<input name="agency" required autocomplete="organization" /></label></div>
+          <div class="frow"><label>Full name *<input name="name" required autocomplete="name" autocapitalize="words" enterkeyhint="next" /></label><label>Work email *<input name="email" type="email" inputmode="email" required autocomplete="email" autocapitalize="off" spellcheck="false" /></label></div>
+          <div class="frow"><label>Phone<input name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="Optional" /></label><label>Agency name *<input name="agency" required autocomplete="organization" /></label></div>
           <div class="frow"><label>Agency size<select name="size"><option value="">Select</option><option>1–5 people</option><option>6–20 people</option><option>21–50 people</option><option>50+ people</option></select></label><label>Hours needed / month<select name="hours"><option value="">Not sure yet</option><option>Under 80</option><option>80–160</option><option>160–480</option><option>480+</option></select></label></div>
           <fieldset><legend>Services you\u2019re interested in *</legend><div class="cbx">${SERVICES.map((s) => `<label class="check"><input type="checkbox" name="svc" value="${esc(s.slug)}" /> ${esc(s.short || s.name)}</label>`).join('')}</div></fieldset>
           <label>Message *<textarea name="msg" rows="5" required minlength="10" placeholder="What would you like to hand off first?"></textarea></label>

@@ -377,3 +377,70 @@ html.simple .faq-grid>div:first-child,html.simple .toc{position:relative;top:aut
   .orbit-css .oa{width:44px;height:44px;margin:-22px;font-size:.75rem}
   .ba-bars .b1 em{left:12px;color:#111}
 }
+
+/* =====================================================================
+   MOBILE v2 (inner pages): forms, stacked tables, touch targets
+   ===================================================================== */
+/* 16px+ inputs so iOS Safari never zooms on focus */
+.role-filters input,.role-filters select,.kform input:not([type=checkbox]):not([type=file]),.kform select,.kform textarea{font-size:max(16px,1rem);min-height:48px}
+.kform textarea{min-height:120px}
+.kform label.check{min-height:44px}
+.cbx .check{min-height:48px}
+.check input{width:20px;height:20px}
+.seg button{min-height:44px}
+.fchip{min-height:44px}
+.c-card a{display:inline-flex;align-items:center;min-height:44px}
+.crumbs{align-items:center;gap:2px 8px}
+.crumbs a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:44px}
+.crumbs [aria-current]{display:inline-flex;align-items:center;min-height:44px}
+
+@media (max-width:900px){
+  .ph,.ph.center:not(.small){min-height:0}
+  .ph{padding:112px 0 56px}
+  .ph.small{padding:112px 0 24px}
+  .kform button[type=submit]{justify-self:stretch;justify-content:center}
+  .faq-grid{gap:28px}
+  .qa button{min-height:64px;padding:18px 0}
+  .ps-card{border-radius:26px}
+}
+/* comparison / service-level tables become stacked cards on phones */
+@media (max-width:640px){
+  .tbl.stack thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  .tbl.stack,.tbl.stack tbody{display:block;width:100%}
+  .tbl.stack tr{display:block;padding:16px 0;border-bottom:1px solid var(--line)}
+  .tbl.stack tr:last-child{border-bottom:0}
+  .tbl.stack tbody th,.tbl.big.stack tbody th{display:block;padding:0 0 10px;border:0;font-weight:600;font-size:1rem}
+  .tbl.stack td,.tbl.big.stack td{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:9px 0;border:0;border-top:1px dashed var(--line);text-align:right}
+  .tbl.stack td::before{content:attr(data-label);color:var(--mut);font-size:.84rem;text-align:left}
+  .tbl.stack td.hl{background:rgba(228,242,34,.1);margin:0 -10px;padding-inline:10px;border-radius:10px;border-top-color:transparent}
+  .tbl.stack td.hl::before{color:var(--fg);font-weight:500}
+  .dcard.dark .tbl.stack tr,.dcard.dark .tbl.stack td{border-color:rgba(255,255,255,.12)}
+  .dcard.dark .tbl.stack td::before{color:#a4a4b6}
+  .tbl-wrap{padding:4px 18px;overflow:visible}
+  .dcard{padding:24px 20px;border-radius:24px}
+}
+@media (max-width:560px){
+  .ph-title{font-size:clamp(2.2rem,10.5vw,3.4rem)}
+  .ph .lead{margin:20px 0 26px}
+  .price-badge{rotate:-2deg;padding:26px 28px}
+  .price-badge strong{font-size:clamp(4.6rem,24vw,6rem)}
+  .plan{padding:26px 22px}
+  .plan h3{font-size:2rem}
+  .p-controls{flex-direction:column;align-items:stretch}
+  .seg{justify-content:stretch}.seg button{flex:1 1 auto;justify-content:center;padding:.6rem .8rem}
+  .hcard{min-height:0;padding:24px}.hcard h3{padding-top:28px}
+  .case{padding:24px 20px;gap:18px}
+  .case-r dd{font-size:1.5rem}
+  .weeks li{min-height:0;gap:18px}
+  .leader{padding:24px}
+  .role{padding:20px 0;gap:12px}
+  .role .btn{justify-self:stretch;justify-content:center}
+  .filters{flex-wrap:nowrap;overflow-x:auto;margin-inline:-18px;padding:0 18px 6px;scrollbar-width:none;-webkit-mask:linear-gradient(90deg,#000 85%,transparent);mask:linear-gradient(90deg,#000 85%,transparent)}
+  .filters::-webkit-scrollbar{display:none}
+  .fchip{flex:none}
+  .ba-row{gap:8px}.ba-t{font-size:1.2rem}
+  .orbit-css .core{font-size:2.2rem}
+  .stack3d{height:280px}
+  .qcard{padding:16px}.qcard li{font-size:.82rem}
+  .prose h2{font-size:1.7rem}
+}

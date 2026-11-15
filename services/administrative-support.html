@@ -2,13 +2,13 @@
 <html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Administrative Support | KKS Insurance Services</title>
   <meta name="description" content="Administrative Support support for US insurance agencies: Inbox triage, data entry, document indexing, scheduling and follow-ups. The everyday admin that slows a busy agency down" />
   <meta property="og:title" content="Administrative Support | KKS Insurance Services" />
   <meta property="og:description" content="Administrative Support support for US insurance agencies: Inbox triage, data entry, document indexing, scheduling and follow-ups. The everyday admin that slows a busy agency down" />
   <meta name="theme-color" content="#12121a" />
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
@@ -42,11 +42,11 @@
       <a class="phone" href="tel:+10000000000"><span class="dot" aria-hidden="true"></span>+1 000 000 0000</a>
       <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
     </div>
-    <div class="mobile-menu" id="mobile-menu" hidden>
+    <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Site menu" hidden>
       <ul>
         <li><a href="../index.html">Home</a></li>
         <li>
-          <button class="m-drop-btn" aria-expanded="false" aria-controls="m-svc">Services <span aria-hidden="true">▾</span></button>
+          <button class="m-drop-btn" aria-expanded="false" aria-controls="m-svc">Services <span class="chev" aria-hidden="true">▾</span></button>
           <div class="m-svc" id="m-svc" hidden><a href="../services/personal-lines.html"><i aria-hidden="true">01</i>Personal Lines</a><a href="../services/commercial-lines.html"><i aria-hidden="true">02</i>Commercial Lines</a><a href="../services/trucking-transportation.html"><i aria-hidden="true">03</i>Trucking &amp; Transportation</a><a href="../services/administrative-support.html" aria-current="page"><i aria-hidden="true">04</i>Administrative Support</a><a href="../services/certificates-endorsements.html"><i aria-hidden="true">05</i>Certificates &amp; Endorsements</a><a href="../services/risk-management.html"><i aria-hidden="true">06</i>Risk Management</a><a href="../services/claims.html"><i aria-hidden="true">07</i>Claims</a><a href="../services/accounting.html"><i aria-hidden="true">08</i>Accounting</a><a href="../services/automations-agency-admin.html"><i aria-hidden="true">09</i>Automations / Agency Admin</a></div>
         </li>
         <li><a href="../technology.html">Technology</a></li>
@@ -121,7 +121,7 @@
         <dl class="st-row"><div class="st-card " data-reveal><dt class="serif"><span class="count" data-to="200" data-suffix="+">0</span></dt><dd>Emails triaged per day per desk</dd></div><div class="st-card " data-reveal><dt class="serif"><span class="count" data-to="98" data-suffix="%">0</span></dt><dd>Data entry accuracy target</dd></div><div class="st-card " data-reveal><dt class="serif"><span class="count" data-to="1" data-suffix=" day">0</span></dt><dd>Standard admin turnaround</dd></div><div class="st-card " data-reveal><dt class="serif"><span class="count" data-to="5" data-suffix="">0</span></dt><dd>Day weekly reporting cycle</dd></div></dl>
         <div class="deliver-grid">
           <div class="dcard" data-reveal><p class="mono">Deliverables</p><ul class="checklist"><li>Daily triage summary</li><li>Clean AMS records</li><li>Indexed document library</li><li>Weekly task report</li><li>Living procedure playbook</li></ul></div>
-          <div class="dcard dark" data-reveal><p class="mono">Service levels (sample)</p><table class="tbl"><thead><tr><th scope="col">Task</th><th scope="col">Standard</th><th scope="col">Rush</th></tr></thead><tbody><tr><td>Map the admin load</td><td>Same day</td><td>1 h</td></tr><tr><td>Write the playbook</td><td>4 h</td><td>2 h</td></tr><tr><td>Hand over gradually</td><td>1 business day</td><td>4 h</td></tr><tr><td>Run &amp; report</td><td>2 business days</td><td>Same day</td></tr></tbody></table><p class="small muted">Turnaround targets are placeholders for this preview.</p></div>
+          <div class="dcard dark" data-reveal><p class="mono">Service levels (sample)</p><table class="tbl stack" role="table"><thead role="rowgroup"><tr role="row"><th scope="col" role="columnheader">Task</th><th scope="col" role="columnheader">Standard</th><th scope="col" role="columnheader">Rush</th></tr></thead><tbody role="rowgroup"><tr role="row"><th scope="row" role="rowheader">Map the admin load</th><td role="cell" data-label="Standard">Same day</td><td role="cell" data-label="Rush">1 h</td></tr><tr role="row"><th scope="row" role="rowheader">Write the playbook</th><td role="cell" data-label="Standard">4 h</td><td role="cell" data-label="Rush">2 h</td></tr><tr role="row"><th scope="row" role="rowheader">Hand over gradually</th><td role="cell" data-label="Standard">1 business day</td><td role="cell" data-label="Rush">4 h</td></tr><tr role="row"><th scope="row" role="rowheader">Run &amp; report</th><td role="cell" data-label="Standard">2 business days</td><td role="cell" data-label="Rush">Same day</td></tr></tbody></table><p class="small muted">Turnaround targets are placeholders for this preview.</p></div>
         </div>
       </div>
     </section>
@@ -194,7 +194,7 @@
     <div class="giant serif" aria-hidden="true">KKS<em>insurance</em></div>
     <div class="wrap legal">
       <p>Preview build: names, phone, email, addresses, reviews, case studies and logos are placeholders.</p>
-      <p><a href="../legal/company-information.html">Company information</a> · <a href="../legal/privacy.html">Privacy</a> · <a href="../legal/security.html">Security</a> · <a href="../legal/complaints.html">Complaints</a></p>
+      <p class="legal-links"><a href="../legal/company-information.html">Company information</a><span aria-hidden="true"> · </span><a href="../legal/privacy.html">Privacy</a><span aria-hidden="true"> · </span><a href="../legal/security.html">Security</a><span aria-hidden="true"> · </span><a href="../legal/complaints.html">Complaints</a></p>
       <p>© <span data-year>2026</span> KKS Insurance Services. All rights reserved.</p>
     </div>
   </footer>
@@ -204,6 +204,6 @@
     <span>Let's Talk</span>
   </a>
 
-  <script type="module" src="/src/page.js"></script>
+  <script type="module" src="../src/page.js"></script>
 </body>
 </html>

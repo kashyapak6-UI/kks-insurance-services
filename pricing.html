@@ -2,13 +2,13 @@
 <html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Pricing | KKS Insurance Services</title>
   <meta name="description" content="Simple hourly pricing for insurance operations support, from $6/hr." />
   <meta property="og:title" content="Pricing | KKS Insurance Services" />
   <meta property="og:description" content="Simple hourly pricing for insurance operations support, from $6/hr." />
   <meta name="theme-color" content="#12121a" />
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
@@ -42,11 +42,11 @@
       <a class="phone" href="tel:+10000000000"><span class="dot" aria-hidden="true"></span>+1 000 000 0000</a>
       <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
     </div>
-    <div class="mobile-menu" id="mobile-menu" hidden>
+    <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Site menu" hidden>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li>
-          <button class="m-drop-btn" aria-expanded="false" aria-controls="m-svc">Services <span aria-hidden="true">▾</span></button>
+          <button class="m-drop-btn" aria-expanded="false" aria-controls="m-svc">Services <span class="chev" aria-hidden="true">▾</span></button>
           <div class="m-svc" id="m-svc" hidden><a href="services/personal-lines.html"><i aria-hidden="true">01</i>Personal Lines</a><a href="services/commercial-lines.html"><i aria-hidden="true">02</i>Commercial Lines</a><a href="services/trucking-transportation.html"><i aria-hidden="true">03</i>Trucking &amp; Transportation</a><a href="services/administrative-support.html"><i aria-hidden="true">04</i>Administrative Support</a><a href="services/certificates-endorsements.html"><i aria-hidden="true">05</i>Certificates &amp; Endorsements</a><a href="services/risk-management.html"><i aria-hidden="true">06</i>Risk Management</a><a href="services/claims.html"><i aria-hidden="true">07</i>Claims</a><a href="services/accounting.html"><i aria-hidden="true">08</i>Accounting</a><a href="services/automations-agency-admin.html"><i aria-hidden="true">09</i>Automations / Agency Admin</a></div>
         </li>
         <li><a href="technology.html">Technology</a></li>
@@ -91,7 +91,7 @@
     <section class="sec" data-theme="dark">
       <div class="wrap">
         <div class="head-split"><p class="mono label">Compare Plans</p><h2 class="split">Everything Side <span class="serif"><em>by Side</em></span></h2></div>
-        <div class="tbl-wrap" data-reveal><table class="tbl big"><thead><tr><th scope="col">Feature</th><th scope="col">Essentials</th><th scope="col" class="hl">Specialist</th><th scope="col">Dedicated Pod</th></tr></thead><tbody><tr><th scope="row">Insurance-trained specialists</th><td><span class="yes" aria-label="Included">✓</span></td><td class="hl"><span class="yes" aria-label="Included">✓</span></td><td><span class="yes" aria-label="Included">✓</span></td></tr><tr><th scope="row">Certificates &amp; admin</th><td><span class="yes" aria-label="Included">✓</span></td><td class="hl"><span class="yes" aria-label="Included">✓</span></td><td><span class="yes" aria-label="Included">✓</span></td></tr><tr><th scope="row">Quoting &amp; submissions</th><td><span class="no" aria-label="Not included">–</span></td><td class="hl"><span class="yes" aria-label="Included">✓</span></td><td><span class="yes" aria-label="Included">✓</span></td></tr><tr><th scope="row">Claims &amp; renewals</th><td><span class="no" aria-label="Not included">–</span></td><td class="hl"><span class="yes" aria-label="Included">✓</span></td><td><span class="yes" aria-label="Included">✓</span></td></tr><tr><th scope="row">Second-reviewer QA</th><td>Sampled</td><td class="hl"><span class="yes" aria-label="Included">✓</span></td><td><span class="yes" aria-label="Included">✓</span></td></tr><tr><th scope="row">Dedicated team lead</th><td><span class="no" aria-label="Not included">–</span></td><td class="hl"><span class="no" aria-label="Not included">–</span></td><td><span class="yes" aria-label="Included">✓</span></td></tr><tr><th scope="row">Leave coverage</th><td><span class="no" aria-label="Not included">–</span></td><td class="hl">Add-on</td><td><span class="yes" aria-label="Included">✓</span></td></tr><tr><th scope="row">Reporting</th><td>Weekly</td><td class="hl">Weekly</td><td>Weekly + monthly review</td></tr><tr><th scope="row">Minimum hours / month</th><td>80</td><td class="hl">80</td><td>480 (3 people)</td></tr></tbody></table></div>
+        <div class="tbl-wrap" data-reveal><table class="tbl big stack" role="table"><caption class="sr-only">Plan comparison</caption><thead role="rowgroup"><tr role="row"><th scope="col" role="columnheader">Feature</th><th scope="col" role="columnheader">Essentials</th><th scope="col" role="columnheader" class="hl">Specialist</th><th scope="col" role="columnheader">Dedicated Pod</th></tr></thead><tbody role="rowgroup"><tr role="row"><th scope="row" role="rowheader">Insurance-trained specialists</th><td role="cell" data-label="Essentials"><span class="yes" aria-label="Included">✓</span></td><td role="cell" data-label="Specialist" class="hl"><span class="yes" aria-label="Included">✓</span></td><td role="cell" data-label="Dedicated Pod"><span class="yes" aria-label="Included">✓</span></td></tr><tr role="row"><th scope="row" role="rowheader">Certificates &amp; admin</th><td role="cell" data-label="Essentials"><span class="yes" aria-label="Included">✓</span></td><td role="cell" data-label="Specialist" class="hl"><span class="yes" aria-label="Included">✓</span></td><td role="cell" data-label="Dedicated Pod"><span class="yes" aria-label="Included">✓</span></td></tr><tr role="row"><th scope="row" role="rowheader">Quoting &amp; submissions</th><td role="cell" data-label="Essentials"><span class="no" aria-label="Not included">–</span></td><td role="cell" data-label="Specialist" class="hl"><span class="yes" aria-label="Included">✓</span></td><td role="cell" data-label="Dedicated Pod"><span class="yes" aria-label="Included">✓</span></td></tr><tr role="row"><th scope="row" role="rowheader">Claims &amp; renewals</th><td role="cell" data-label="Essentials"><span class="no" aria-label="Not included">–</span></td><td role="cell" data-label="Specialist" class="hl"><span class="yes" aria-label="Included">✓</span></td><td role="cell" data-label="Dedicated Pod"><span class="yes" aria-label="Included">✓</span></td></tr><tr role="row"><th scope="row" role="rowheader">Second-reviewer QA</th><td role="cell" data-label="Essentials">Sampled</td><td role="cell" data-label="Specialist" class="hl"><span class="yes" aria-label="Included">✓</span></td><td role="cell" data-label="Dedicated Pod"><span class="yes" aria-label="Included">✓</span></td></tr><tr role="row"><th scope="row" role="rowheader">Dedicated team lead</th><td role="cell" data-label="Essentials"><span class="no" aria-label="Not included">–</span></td><td role="cell" data-label="Specialist" class="hl"><span class="no" aria-label="Not included">–</span></td><td role="cell" data-label="Dedicated Pod"><span class="yes" aria-label="Included">✓</span></td></tr><tr role="row"><th scope="row" role="rowheader">Leave coverage</th><td role="cell" data-label="Essentials"><span class="no" aria-label="Not included">–</span></td><td role="cell" data-label="Specialist" class="hl">Add-on</td><td role="cell" data-label="Dedicated Pod"><span class="yes" aria-label="Included">✓</span></td></tr><tr role="row"><th scope="row" role="rowheader">Reporting</th><td role="cell" data-label="Essentials">Weekly</td><td role="cell" data-label="Specialist" class="hl">Weekly</td><td role="cell" data-label="Dedicated Pod">Weekly + monthly review</td></tr><tr role="row"><th scope="row" role="rowheader">Minimum hours / month</th><td role="cell" data-label="Essentials">80</td><td role="cell" data-label="Specialist" class="hl">80</td><td role="cell" data-label="Dedicated Pod">480 (3 people)</td></tr></tbody></table></div>
       </div>
     </section>
     <section class="sec faq-sec" data-theme="cream">
@@ -146,7 +146,7 @@
     <div class="giant serif" aria-hidden="true">KKS<em>insurance</em></div>
     <div class="wrap legal">
       <p>Preview build: names, phone, email, addresses, reviews, case studies and logos are placeholders.</p>
-      <p><a href="legal/company-information.html">Company information</a> · <a href="legal/privacy.html">Privacy</a> · <a href="legal/security.html">Security</a> · <a href="legal/complaints.html">Complaints</a></p>
+      <p class="legal-links"><a href="legal/company-information.html">Company information</a><span aria-hidden="true"> · </span><a href="legal/privacy.html">Privacy</a><span aria-hidden="true"> · </span><a href="legal/security.html">Security</a><span aria-hidden="true"> · </span><a href="legal/complaints.html">Complaints</a></p>
       <p>© <span data-year>2026</span> KKS Insurance Services. All rights reserved.</p>
     </div>
   </footer>
@@ -156,6 +156,6 @@
     <span>Let's Talk</span>
   </a>
 
-  <script type="module" src="/src/page.js"></script>
+  <script type="module" src="src/page.js"></script>
 </body>
 </html>

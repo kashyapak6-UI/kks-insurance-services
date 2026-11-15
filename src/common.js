@@ -6,6 +6,7 @@ import { SplitText } from 'gsap/SplitText';
 import Lenis from 'lenis';
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
+ScrollTrigger.config({ ignoreMobileResize: true });
 export { gsap, ScrollTrigger, SplitText };
 
 export const root = document.documentElement;
@@ -29,26 +30,78 @@ if (!reduced) {
 export const scrollToEl = (el, offset = -70) => { if (lenis) lenis.scrollTo(el, { offset }); else el.scrollIntoView(); };
 
 /* ---------------- header / nav ---------------- */
-const header = $('#header'), burger = $('.burger', header), mMenu = $('#mobile-menu');
-export const setMenu = (open) => { burger.setAttribute('aria-expanded', open); mMenu.hidden = !open; burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu'); if (lenis) open ? lenis.stop() : lenis.start(); };
-burger.addEventListener('click', () => setMenu(burger.getAttribute('aria-expanded') !== 'true'));
-const mDrop = $('.m-drop-btn', mMenu);
+const header = $('#header'), burger = $('.burger', header), mMenu = $('#mobile-menu'), mDrop = $('.m-drop-btn', mMenu);
+const focusables = () => [burger, ...$$('a[href],button:not([disabled])', mMenu).filter((el) => el.offsetParent !== null)];
+let menuOpen = false;
+// Scroll lock: overflow:hidden on <html>/<body> (honoured by iOS 16+ Safari and Android Chrome) plus
+// overscroll-behavior:contain on the menu. Scroll position is never touched, so scroll-linked themes/reveals don't jump.
+const lockScroll = (on) => root.classList.toggle('menu-open', on);
+export const setMenu = (open, { restoreFocus = true } = {}) => {
+  if (open === menuOpen) return;
+  menuOpen = open;
+  burger.setAttribute('aria-expanded', open);
+  burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  mMenu.hidden = !open;
+  header.classList.toggle('menu-open', open);
+  if (lenis) open ? lenis.stop() : lenis.start();
+  lockScroll(open);
+  if (open) { mMenu.scrollTop = 0; requestAnimationFrame(() => burger.focus({ preventScroll: true })); }
+  else {
+    mDrop.setAttribute('aria-expanded', 'false'); $('#m-svc').hidden = true;
+    if (restoreFocus) burger.focus({ preventScroll: true });
+  }
+};
+burger.addEventListener('click', () => setMenu(!menuOpen));
 mDrop.addEventListener('click', () => { const o = mDrop.getAttribute('aria-expanded') !== 'true'; mDrop.setAttribute('aria-expanded', o); $('#m-svc').hidden = !o; });
+// Any link tapped inside the mobile menu closes it (same-page anchors are handled below, other pages navigate).
+$$('a[href]', mMenu).forEach((a) => a.addEventListener('click', () => setMenu(false, { restoreFocus: false })));
+// Keep keyboard focus inside the open menu (burger acts as the close button).
+header.addEventListener('keydown', (e) => {
+  if (!menuOpen || e.key !== 'Tab') return;
+  const f = focusables(), first = f[0], last = f[f.length - 1];
+  if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+  else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+});
+// Close if the viewport grows to desktop, or when the page is restored from the back/forward cache.
+matchMedia('(min-width: 1141px)').addEventListener('change', (m) => m.matches && setMenu(false, { restoreFocus: false }));
+addEventListener('pageshow', (e) => { if (e.persisted) setMenu(false, { restoreFocus: false }); });
 const dropLi = $('.has-drop', header), dropBtn = $('.drop-btn', dropLi);
 const closeDrop = () => { dropLi.classList.remove('open'); dropBtn.setAttribute('aria-expanded', 'false'); };
 dropBtn.addEventListener('click', (e) => { e.stopPropagation(); const o = !dropLi.classList.contains('open'); dropLi.classList.toggle('open', o); dropBtn.setAttribute('aria-expanded', o); });
 document.addEventListener('click', (e) => { if (!dropLi.contains(e.target)) closeDrop(); });
-document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { closeDrop(); setMenu(false); } });
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { closeDrop(); if (menuOpen) setMenu(false); } });
 $$('a[href^="#"]').forEach((a) => a.addEventListener('click', (e) => {
   const id = a.getAttribute('href');
   if (id.length < 2) { e.preventDefault(); return; }
   const el = document.getElementById(id.slice(1)); if (!el) return;
-  e.preventDefault(); setMenu(false); closeDrop();
+  e.preventDefault(); setMenu(false, { restoreFocus: false }); closeDrop();
   scrollToEl(el, id === '#top' ? 0 : -70);
   history.replaceState(null, '', id);
 }));
 const onScrollHeader = () => header.classList.toggle('scrolled', scrollY > 30);
 addEventListener('scroll', onScrollHeader, { passive: true }); onScrollHeader();
+
+/* ---------------- WhatsApp button never covers a CTA ---------------- */
+const fab = $('.wa-float');
+if (fab) {
+  const targets = () => $$('main .btn, main button, main .round, main input:not([type=hidden]), main select, main textarea, main label.check, .site-footer a');
+  let tg = targets(), raf = 0;
+  const check = () => {
+    raf = 0;
+    if (!matchMedia('(max-width: 900px), (pointer: coarse)').matches) { fab.classList.remove('away'); return; }
+    // phones: stay out of the way on the first screen (hero CTAs/stats), then appear
+    if (scrollY < innerHeight * 0.6) { fab.classList.add('away'); return; }
+    // resting box of the fixed button (offset* ignores the hide transform)
+    const a = { left: fab.offsetLeft, top: fab.offsetTop, right: fab.offsetLeft + fab.offsetWidth, bottom: fab.offsetTop + fab.offsetHeight }, pad = 8;
+    const hit = tg.some((el) => { if (!el.offsetParent) return false; const b = el.getBoundingClientRect(); return !(a.right + pad <= b.left || a.left - pad >= b.right || a.bottom + pad <= b.top || a.top - pad >= b.bottom); });
+    fab.classList.toggle('away', hit);
+  };
+  const queue = () => { if (!raf) raf = requestAnimationFrame(check); };
+  addEventListener('scroll', queue, { passive: true });
+  addEventListener('resize', () => { tg = targets(); queue(); }, { passive: true });
+  new MutationObserver(() => { tg = targets(); queue(); }).observe(document.querySelector('main') || document.body, { attributes: true, attributeFilter: ['hidden'], subtree: true });
+  queue();
+}
 
 /* ---------------- theme switching on scroll (Mercury) ---------------- */
 const setTheme = (t) => { if (root.dataset.theme !== t) root.dataset.theme = t; };

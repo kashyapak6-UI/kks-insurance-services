@@ -184,14 +184,18 @@ $('[data-next]').addEventListener('click', () => go(1));
 car.addEventListener('keydown', (e) => { if (e.key === 'ArrowRight') go(1); if (e.key === 'ArrowLeft') go(-1); });
 let hover = false, carVisible = false;
 car.addEventListener('pointerenter', () => (hover = true)); car.addEventListener('pointerleave', () => (hover = false));
+let touchedAt = 0; car.addEventListener('touchstart', () => (touchedAt = Date.now()), { passive: true });
 new IntersectionObserver(([e]) => (carVisible = e.isIntersecting)).observe(car);
-if (!reduced) setInterval(() => { if (carVisible && !hover && !document.hidden) go(1); }, 4200);
+if (!reduced) setInterval(() => { if (carVisible && !hover && !document.hidden && Date.now() - touchedAt > 8000) go(1); }, 4200);
 let drag = null;
 car.addEventListener('pointerdown', (e) => { if (e.pointerType !== 'mouse') return; drag = { x: e.clientX, l: car.scrollLeft }; car.style.scrollSnapType = 'none'; });
 addEventListener('pointermove', (e) => { if (drag) car.scrollLeft = drag.l - (e.clientX - drag.x); });
 addEventListener('pointerup', () => { if (drag) { drag = null; car.style.scrollSnapType = ''; } });
 
 /* ---------------- render loop / resize ---------------- */
-gsap.ticker.add(() => { if (document.hidden) return; globe && globe.frame(); orbit && orbit.frame(); });
-let rt;
-addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(() => { globe && globe.resize(); orbit && orbit.resize(); ScrollTrigger.refresh(); }, 150); });
+let fN = 0;
+// phones render the WebGL scenes at ~30fps to keep the 3D light on the GPU and battery
+gsap.ticker.add(() => { if (document.hidden || (mobile && fN++ % 2)) return; globe && globe.frame(); orbit && orbit.frame(); });
+let rt, lastW = innerWidth;
+// Mobile URL-bar show/hide only changes the height: skip the costly re-layout unless the width changed.
+addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(() => { if (simple && innerWidth === lastW) return; lastW = innerWidth; globe && globe.resize(); orbit && orbit.resize(); ScrollTrigger.refresh(); }, 150); });

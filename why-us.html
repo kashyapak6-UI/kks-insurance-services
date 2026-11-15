@@ -2,13 +2,13 @@
 <html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Why Us | KKS Insurance Services</title>
   <meta name="description" content="Why US agencies choose KKS Insurance Services as their operations partner." />
   <meta property="og:title" content="Why Us | KKS Insurance Services" />
   <meta property="og:description" content="Why US agencies choose KKS Insurance Services as their operations partner." />
   <meta name="theme-color" content="#12121a" />
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
@@ -42,11 +42,11 @@
       <a class="phone" href="tel:+10000000000"><span class="dot" aria-hidden="true"></span>+1 000 000 0000</a>
       <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
     </div>
-    <div class="mobile-menu" id="mobile-menu" hidden>
+    <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Site menu" hidden>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li>
-          <button class="m-drop-btn" aria-expanded="false" aria-controls="m-svc">Services <span aria-hidden="true">▾</span></button>
+          <button class="m-drop-btn" aria-expanded="false" aria-controls="m-svc">Services <span class="chev" aria-hidden="true">▾</span></button>
           <div class="m-svc" id="m-svc" hidden><a href="services/personal-lines.html"><i aria-hidden="true">01</i>Personal Lines</a><a href="services/commercial-lines.html"><i aria-hidden="true">02</i>Commercial Lines</a><a href="services/trucking-transportation.html"><i aria-hidden="true">03</i>Trucking &amp; Transportation</a><a href="services/administrative-support.html"><i aria-hidden="true">04</i>Administrative Support</a><a href="services/certificates-endorsements.html"><i aria-hidden="true">05</i>Certificates &amp; Endorsements</a><a href="services/risk-management.html"><i aria-hidden="true">06</i>Risk Management</a><a href="services/claims.html"><i aria-hidden="true">07</i>Claims</a><a href="services/accounting.html"><i aria-hidden="true">08</i>Accounting</a><a href="services/automations-agency-admin.html"><i aria-hidden="true">09</i>Automations / Agency Admin</a></div>
         </li>
         <li><a href="technology.html">Technology</a></li>
@@ -93,7 +93,7 @@
     <section class="sec" data-theme="dark">
       <div class="wrap">
         <div class="head-split"><p class="mono label">The Comparison</p><h2 class="split">In-House, Freelancer, <span class="serif"><em>or KKS?</em></span></h2></div>
-        <div class="tbl-wrap" data-reveal><table class="tbl big"><thead><tr><th scope="col"></th><th scope="col">In-house hire</th><th scope="col">Solo freelancer</th><th scope="col" class="hl">KKS team</th></tr></thead><tbody><tr><th scope="row">Fully loaded cost per hour</th><td>High</td><td>Varies</td><td class="hl">From $6/hr</td></tr><tr><th scope="row">Insurance-trained from day one</th><td>✓</td><td>–</td><td class="hl">✓</td></tr><tr><th scope="row">QA on every task</th><td>Depends</td><td>–</td><td class="hl">✓</td></tr><tr><th scope="row">Coverage when someone is out</th><td>–</td><td>–</td><td class="hl">✓</td></tr><tr><th scope="row">Documented procedures</th><td>Depends</td><td>–</td><td class="hl">✓</td></tr><tr><th scope="row">Scale up or down monthly</th><td>–</td><td>✓</td><td class="hl">✓</td></tr><tr><th scope="row">Management overhead</th><td>High</td><td>High</td><td class="hl">Low</td></tr></tbody></table></div>
+        <div class="tbl-wrap" data-reveal><table class="tbl big stack" role="table"><thead role="rowgroup"><tr role="row"><th scope="col" role="columnheader"><span class="sr-only">Factor</span></th><th scope="col" role="columnheader">In-house hire</th><th scope="col" role="columnheader">Solo freelancer</th><th scope="col" role="columnheader" class="hl">KKS team</th></tr></thead><tbody role="rowgroup"><tr role="row"><th scope="row" role="rowheader">Fully loaded cost per hour</th><td role="cell" data-label="In-house hire">High</td><td role="cell" data-label="Solo freelancer">Varies</td><td role="cell" data-label="KKS team" class="hl">From $6/hr</td></tr><tr role="row"><th scope="row" role="rowheader">Insurance-trained from day one</th><td role="cell" data-label="In-house hire">✓</td><td role="cell" data-label="Solo freelancer">–</td><td role="cell" data-label="KKS team" class="hl">✓</td></tr><tr role="row"><th scope="row" role="rowheader">QA on every task</th><td role="cell" data-label="In-house hire">Depends</td><td role="cell" data-label="Solo freelancer">–</td><td role="cell" data-label="KKS team" class="hl">✓</td></tr><tr role="row"><th scope="row" role="rowheader">Coverage when someone is out</th><td role="cell" data-label="In-house hire">–</td><td role="cell" data-label="Solo freelancer">–</td><td role="cell" data-label="KKS team" class="hl">✓</td></tr><tr role="row"><th scope="row" role="rowheader">Documented procedures</th><td role="cell" data-label="In-house hire">Depends</td><td role="cell" data-label="Solo freelancer">–</td><td role="cell" data-label="KKS team" class="hl">✓</td></tr><tr role="row"><th scope="row" role="rowheader">Scale up or down monthly</th><td role="cell" data-label="In-house hire">–</td><td role="cell" data-label="Solo freelancer">✓</td><td role="cell" data-label="KKS team" class="hl">✓</td></tr><tr role="row"><th scope="row" role="rowheader">Management overhead</th><td role="cell" data-label="In-house hire">High</td><td role="cell" data-label="Solo freelancer">High</td><td role="cell" data-label="KKS team" class="hl">Low</td></tr></tbody></table></div>
         <p class="small muted">Illustrative comparison for this preview.</p>
       </div>
     </section>
@@ -141,7 +141,7 @@
     <div class="giant serif" aria-hidden="true">KKS<em>insurance</em></div>
     <div class="wrap legal">
       <p>Preview build: names, phone, email, addresses, reviews, case studies and logos are placeholders.</p>
-      <p><a href="legal/company-information.html">Company information</a> · <a href="legal/privacy.html">Privacy</a> · <a href="legal/security.html">Security</a> · <a href="legal/complaints.html">Complaints</a></p>
+      <p class="legal-links"><a href="legal/company-information.html">Company information</a><span aria-hidden="true"> · </span><a href="legal/privacy.html">Privacy</a><span aria-hidden="true"> · </span><a href="legal/security.html">Security</a><span aria-hidden="true"> · </span><a href="legal/complaints.html">Complaints</a></p>
       <p>© <span data-year>2026</span> KKS Insurance Services. All rights reserved.</p>
     </div>
   </footer>
@@ -151,6 +151,6 @@
     <span>Let's Talk</span>
   </a>
 
-  <script type="module" src="/src/page.js"></script>
+  <script type="module" src="src/page.js"></script>
 </body>
 </html>

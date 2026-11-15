@@ -25,7 +25,7 @@ h1,h2,h3,h4{margin:0;font-weight:500;letter-spacing:-.025em;line-height:1.02}
 .skip:focus{position:fixed;z-index:100;top:8px;left:8px;background:var(--lime);color:#000;padding:8px 14px;border-radius:8px}
 :focus-visible{outline:2px solid var(--blue2);outline-offset:3px;border-radius:6px}
 .muted{color:var(--mut)}.small{font-size:.86rem}
-.sec{position:relative;padding:clamp(90px,12vw,160px) 0}
+.sec{position:relative;padding:clamp(72px,12vw,160px) 0}
 .label{color:var(--mut);margin:0 0 18px;display:flex;align-items:center;gap:10px}
 .label::before{content:"";width:22px;height:1px;background:currentColor}
 h2{font-size:clamp(2.3rem,5.2vw,4.6rem)}
@@ -377,4 +377,82 @@ html.simple .why-copy{position:relative;top:auto}
   *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
   .ticker-track,.marquee-track{animation:none!important;flex-wrap:wrap;width:auto;justify-content:center}
   .marquee-track>[aria-hidden],.ticker-track>[data-dup]{display:none}
+}
+
+/* =====================================================================
+   MOBILE v2: menu, safe areas, fluid type, touch targets, WhatsApp FAB
+   ===================================================================== */
+h2{font-size:clamp(2.05rem,7.2vw + .75rem,4.6rem)}
+.cta h2{font-size:clamp(2.3rem,9vw + .5rem,6.6rem)}
+.badge-price{font-size:clamp(5.5rem,30vw,15rem)}
+.brand{min-height:44px}
+.site-header{padding-top:env(safe-area-inset-top);padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right)}
+.site-header.menu-open,.site-header.scrolled.menu-open{background:var(--bg);border-color:var(--line);backdrop-filter:none;-webkit-backdrop-filter:none}
+html.menu-open,html.menu-open body{overflow:hidden}
+html.menu-open .wa-float{opacity:0;visibility:hidden;pointer-events:none}
+.mobile-menu{top:calc(70px + env(safe-area-inset-top));overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding:8px max(24px,env(safe-area-inset-right)) calc(40px + env(safe-area-inset-bottom)) max(24px,env(safe-area-inset-left))}
+.mobile-menu li>a,.m-drop-btn{min-height:54px;align-items:center;padding:10px 0;font-size:clamp(1.35rem,5.6vw,1.6rem);color:var(--fg)}
+.m-drop-btn .chev{display:inline-block;font-size:.7em;transition:transform .3s var(--ease)}
+.m-drop-btn[aria-expanded=true] .chev{transform:rotate(180deg)}
+.m-svc a{min-height:46px;padding:.5rem .7rem}
+.mobile-menu>.btn{width:100%;justify-content:center;min-height:52px}
+.burger{flex:none}
+/* WhatsApp: safe-area aware, steps aside when it would cover a button/field (see common.js) */
+.wa-float{right:calc(18px + env(safe-area-inset-right));bottom:calc(18px + env(safe-area-inset-bottom));transition:transform .35s var(--ease),opacity .3s,visibility .3s}
+.wa-float.away{opacity:0;visibility:hidden;pointer-events:none;transform:translateY(18px) scale(.85)}
+/* reviews carousel: smooth native swipe */
+.rv-track{overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
+/* the hero globe only needs one screen of canvas on phones (keeps the GPU load light) */
+html.simple .hero-pin .gl{height:100vh;height:100svh;bottom:auto}
+
+@media (max-width:900px),(pointer:coarse){
+  .site-header.scrolled:not(.menu-open){background:color-mix(in srgb,var(--bg) 94%,transparent)}
+  .text-link{min-height:44px;align-items:center;border-bottom:0;padding-bottom:0;text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:1px}
+  .quick,.contact{gap:0 16px}
+  .site-footer ul a{display:inline-flex;align-items:center;min-height:44px}
+  .socials a{width:44px;height:44px}
+  .legal-links a{display:inline-flex;align-items:center;min-height:44px;min-width:44px}
+  .site-footer ul a{min-width:44px}
+  .round{width:52px;height:52px}
+  .site-footer{padding-bottom:calc(96px + env(safe-area-inset-bottom))}
+}
+@media (max-width:900px){
+  .hero .lead{margin:22px 0 28px}
+  .stats{margin-top:36px}
+  .head-split{margin-bottom:40px}
+  .trust-grid,.why-grid,.wf-grid{gap:36px}
+  .rv-foot{gap:16px}
+  .lead-grid{padding:28px 22px;border-radius:28px}
+  .avatar{width:140px;font-size:3.6rem}
+  .giant{margin:48px 0 16px}
+}
+@media (max-width:560px){
+  .wrap{width:calc(100% - 36px - env(safe-area-inset-left) - env(safe-area-inset-right))}
+  .header-inner{width:calc(100% - 32px);height:64px}
+  .mobile-menu{top:calc(64px + env(safe-area-inset-top))}
+  .wm small{font-size:.66rem}
+  .ctas .btn{flex:1 1 auto;justify-content:center}
+  .hero .ctas{flex-direction:column;align-items:stretch;max-width:420px}
+  .wa-float{padding:0;width:56px;height:56px;justify-content:center}
+  .lead{font-size:1rem}
+  .highlights li{gap:14px;padding:16px 0}
+  .flip b{font-size:clamp(1.45rem,6.4vw,1.8rem)}
+  .svc{padding:24px}.svc h3{font-size:clamp(1.9rem,8.5vw,2.4rem)}.svc .num{top:24px;right:24px}
+  .rating-stats{gap:10px}.rating-stats div{padding:16px}
+  .rv{padding:22px;min-height:250px}.rv q{font-size:1.32rem}
+  .team-stat strong{font-size:3.2rem}
+  .wf-stage{border-radius:24px}
+  html.simple .wf-stage{padding:14px}
+  .panel{padding:16px}
+  .car{grid-template-columns:64px 1fr 56px;gap:8px;padding:8px 10px}
+  .stamp{width:84px;height:84px;font-size:1.3rem}
+  .cta .ctas,.cta-inner>.btn{width:100%}
+  .cta-inner>.btn{justify-content:center}
+}
+@media (max-width:360px){
+  .hero-title{font-size:2.55rem}
+  .stats{gap:12px}.stats dt{font-size:1.7rem}
+  .tiles{gap:8px}.tile{padding:10px}.tile b{font-size:1.35rem}.spark{display:none}
+  .wm small{display:none}
+  .badge-price{font-size:5.2rem}
 }
