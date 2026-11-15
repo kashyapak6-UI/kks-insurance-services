@@ -1,0 +1,1016 @@
+{
+ "mercury": {
+  "H": 12984,
+  "themeLog": [
+   {
+    "y": 0,
+    "body": "rgba(0, 0, 0, 0)",
+    "center": "rgb(39, 39, 53)"
+   },
+   {
+    "y": 1082,
+    "body": "rgba(0, 0, 0, 0)",
+    "center": "rgb(39, 39, 53)"
+   },
+   {
+    "y": 999,
+    "body": "rgba(0, 0, 0, 0)",
+    "center": "rgb(23, 23, 33)"
+   },
+   {
+    "y": 3246,
+    "body": "rgba(0, 0, 0, 0)",
+    "center": "rgb(246, 245, 242)"
+   },
+   {
+    "y": 4328,
+    "body": "rgba(0, 0, 0, 0)",
+    "center": "rgb(251, 252, 253)"
+   },
+   {
+    "y": 5410,
+    "body": "rgba(0, 0, 0, 0)",
+    "center": "rgb(251, 252, 253)"
+   },
+   {
+    "y": 6492,
+    "body": "rgba(0, 0, 0, 0)",
+    "center": "rgb(23, 23, 33)"
+   },
+   {
+    "y": 7574,
+    "body": "rgba(0, 0, 0, 0)",
+    "center": "rgb(23, 23, 33)"
+   },
+   {
+    "y": 8656,
+    "body": "rgba(0, 0, 0, 0)",
+    "center": "rgb(23, 23, 33)"
+   },
+   {
+    "y": 9738,
+    "body": "rgba(0, 0, 0, 0)",
+    "center": "rgb(23, 23, 33)"
+   },
+   {
+    "y": 10734,
+    "body": "rgba(0, 0, 0, 0)",
+    "center": "rgb(23, 23, 33)"
+   },
+   {
+    "y": 10734,
+    "body": "rgba(0, 0, 0, 0)",
+    "center": "rgb(23, 23, 33)"
+   }
+  ],
+  "info": {
+   "title": "Online Business Banking For Startups, Small Businesses & Scaling Companies",
+   "libs": {
+    "gsap": false,
+    "ScrollTrigger": false,
+    "lottie": false,
+    "lenis": false,
+    "framer": false,
+    "next": false,
+    "three": false,
+    "rive": false
+   },
+   "canvas": 1,
+   "video": 5,
+   "svgs": 102,
+   "imgs": 52,
+   "marquee": [
+    "flex w-max gap-column-gap-logomash [&_svg]:transform-gpu [&_"
+   ],
+   "anims": [
+    "translateUp",
+    "fadeIn",
+    "fadeInTabTranslate",
+    "fadeOutBlur",
+    "fadeOutTabTranslate"
+   ],
+   "transforms": 37,
+   "sticky": [
+    "DIV.sticky inset-0 z-navbar-z-index",
+    "DIV.sticky bottom-0 flex w-full shrink-0 bg-surface-elevated px-",
+    "DIV.sticky right-0 bottom-grid-margins left-0 z-3 col-start-1 ro",
+    "SPAN.pointer-events-none overflow-hidden rounded-4xl fixed top-0 ",
+    "DIV."
+   ],
+   "h": [
+    "H1: Radically different banking [arcadiaDisplay 49.3472px]",
+    "H2: Loved by 450K+ of the most ambitious entrepreneurs on the planet [arcadiaDisplay 42px]",
+    "H2: You’re creating something to stand the test of time. So are we. [arcadiaDisplay 42px]",
+    "H2: $1B in annualized revenue and 4+ years profitable [arcadiaDisplay 28px]",
+    "H2: Building banking for the agentic era [arcadiaDisplay 28px]",
+    "H2: Mercury hits $5.2B valuation [arcadiaDisplay 28px]",
+    "H2: Banking – redesigned from the ground up. [arcadiaDisplay 42px]",
+    "H2: Mercury for business [arcadiaDisplay 28px]",
+    "H2: Mercury for personal [arcadiaDisplay 28px]",
+    "H2: Disclaimers and footnotes [arcadia 12px]"
+   ],
+   "fonts": [
+    "SPAN:arcadia 400",
+    "A:arcadia 400",
+    "BUTTON:arcadia 420",
+    "A:arcadia 420",
+    "P:arcadia 420",
+    "SPAN:arcadia 420",
+    "P:arcadiaDisplay 480",
+    "P:arcadia 360",
+    "P:arcadia 480",
+    "P:arcadia 400",
+    "P:arcadia 500",
+    "BUTTON:arcadia 400",
+    "H1:arcadiaDisplay 480",
+    "SPAN:arcadiaDisplay 480",
+    "SPAN:arcadia 360",
+    "A:arcadia 360",
+    "SPAN:arcadia 480",
+    "H3:arcadia 400",
+    "A:arcadia 480",
+    "H2:arcadiaDisplay 480",
+    "SPAN:arcadiaDisplay 360",
+    "A:arcadiaDisplay 480",
+    "H2:arcadia 400"
+   ],
+   "colors": [
+    [
+     "rgb(237, 237, 243)",
+     391
+    ],
+    [
+     "rgb(195, 195, 204)",
+     102
+    ],
+    [
+     "rgb(0, 0, 0)",
+     88
+    ],
+    [
+     "bg rgba(156, 180, 232, 0.2)",
+     16
+    ],
+    [
+     "rgb(255, 255, 255)",
+     12
+    ],
+    [
+     "bg rgba(175, 178, 206, 0.2)",
+     8
+    ],
+    [
+     "bg rgb(82, 102, 235)",
+     6
+    ],
+    [
+     "bg rgb(237, 237, 243)",
+     6
+    ],
+    [
+     "bg rgb(30, 30, 42)",
+     3
+    ],
+    [
+     "rgb(39, 39, 53)",
+     3
+    ],
+    [
+     "bg rgba(112, 115, 147, 0.1)",
+     3
+    ],
+    [
+     "rgb(244, 245, 249)",
+     2
+    ],
+    [
+     "bg rgb(39, 39, 53)",
+     1
+    ],
+    [
+     "rgb(252, 146, 180)",
+     1
+    ]
+   ],
+   "cssVars": [
+    ":root { --wipeOut-duration: .15s; --tab-fade-duration: .3s; --media-tab-fade-duration: .5s; --theme-transition-duration: .5s; --theme-transition-ease: cubic-bezier(0, 0, .6, 1); --testimonial-overlay-gradient-angle: 180deg; --testimonial-overlay-gradient: var(--testimonial-overlay-gradient-angle), #0000 0%, #0000 6.67%, #00000005 13.33%, #0000000d 20%, #00000014 26.67%, #00000021 33.33%, #00000030 40%, #00000040 46.67%, #0000004f 53.33%, #0000005e 60%, #0000006e 66.67%, #0000007a 73.33%, #00000082 80%, #0000008a 86.67%, #0000008f 93.33%, #0000008f 100%; --testimonial-overlay-scrim: linear-gradient(180deg, #0000 0%, #0000 2.67%, #00000006 5.33%, #0000000f 8%, #00000018 10.67%, #00000027 13.33%, #00000038 16%, #0000004a 18.67%, #0000005c 21.33%, #0000006d 24%, #0000007f 26.67%, #0000008e 29.33%, #00000097 32%, #000000a0 34.67%, #000000a6 37.33%, #000000a6 100%); }"
+   ]
+  },
+  "scripts": [
+   "font: https://mercury.com/_next/static/media/73c8302d2fdfe340-s.p.30xqm3yldpj47.woff2",
+   "font: https://mercury.com/_next/static/media/ArcadiaDisplay_Variable-s.p.37a6szvr8v8r0.woff2",
+   "font: https://mercury.com/_next/static/media/ArcadiaText_Variable-s.p.1x_q7ztf_htve.woff2",
+   "font: https://mercury.com/_next/static/media/tiempos_headline_light_italic-s.p.287v3vlo3shaa.woff2",
+   "font: https://mercury.com/_next/static/media/tiempos_headline_medium_italic-s.p.0dh9c7ptm5ct1.woff2",
+   "font: https://mercury.com/_next/static/media/tiempos_headline_regular-s.p.41845ccf2x5wc.woff2",
+   "font: https://mercury.com/_next/static/media/tiempos_headline_regular_italic-s.p.0utm66okn5ry3.woff2",
+   "script: https://mercury.com/_next/static/chunks/0gbwf72_grtsy.js",
+   "script: https://mercury.com/_next/static/chunks/010uxw5_281dv.js",
+   "script: https://mercury.com/_next/static/chunks/17pxswoun8wxr.js",
+   "script: https://mercury.com/_next/static/chunks/1phnn6inn3woa.js",
+   "script: https://mercury.com/_next/static/chunks/41ako5rvhrh2a.js",
+   "script: https://mercury.com/_next/static/chunks/3mg54ewprd8hv.js",
+   "script: https://mercury.com/_next/static/chunks/08jinri3-s-9u.js",
+   "script: https://mercury.com/_next/static/chunks/1r0x70u5nz5sb.js",
+   "script: https://mercury.com/_next/static/chunks/38vxfgvlvfk5h.js",
+   "script: https://mercury.com/_next/static/chunks/turbopack-18_5df4vs6w4n.js",
+   "script: https://mercury.com/_next/static/chunks/3izxrfy6fgwjf.js",
+   "script: https://mercury.com/_next/static/chunks/173iagyyam8_d.js",
+   "script: https://mercury.com/_next/static/chunks/1tjnz-nodb8fs.js",
+   "script: https://mercury.com/_next/static/chunks/0_dz88_jkun1k.js",
+   "script: https://mercury.com/_next/static/chunks/1c6dh4o0dxnu-.js",
+   "script: https://mercury.com/_next/static/chunks/265znwmpfrqfu.js",
+   "script: https://mercury.com/_next/static/chunks/2qn_jyo382h07.js",
+   "script: https://mercury.com/_next/static/chunks/03g7d3h7ok2rt.js",
+   "script: https://mercury.com/_next/static/chunks/38zbn995v15mw.js",
+   "script: https://mercury.com/_next/static/chunks/344i7hoxt_lg0.js",
+   "script: https://mercury.com/_next/static/chunks/3rvl-leiod5eb.js",
+   "script: https://mercury.com/_next/static/chunks/1ywz7e31qd_di.js",
+   "script: https://mercury.com/_next/static/chunks/1bi1v1ffcij_s.js",
+   "script: https://mercury.com/_next/static/chunks/3l4p43ptfdd_2.js",
+   "script: https://mercury.com/_next/static/chunks/3p1nfv_f-n4bi.js",
+   "script: https://mercury.com/_next/static/chunks/1tunvaxldjzib.js",
+   "script: https://mercury.com/_next/static/chunks/3uvbdlogersf5.js",
+   "script: https://mercury.com/_next/static/chunks/1i9c_zsyi-2m-.js",
+   "script: https://mercury.com/_next/static/chunks/2dsrzp2g19kdr.js",
+   "script: https://mercury.com/_next/static/chunks/0y4dviko059ha.js",
+   "script: https://mercury.com/_next/static/chunks/365r8ppdwoh3e.js",
+   "script: https://mercury.com/_next/static/chunks/3nnhiq-elpfmo.js",
+   "script: https://mercury.com/_next/static/chunks/2fkwxlgp6ioah.js"
+  ]
+ },
+ "ramp": {
+  "H": 13840,
+  "themeLog": [
+   {
+    "y": 0,
+    "body": "lab(100 0 0)",
+    "center": "lab(100 0 0)"
+   },
+   {
+    "y": 1153,
+    "body": "lab(100 0 0)",
+    "center": "lab(95.604 0.426412 1.20401)"
+   },
+   {
+    "y": 2456,
+    "body": "lab(100 0 0)",
+    "center": "lab(95.604 0.426412 1.20401)"
+   },
+   {
+    "y": 3609,
+    "body": "lab(100 0 0)",
+    "center": "lab(100 0 0)"
+   },
+   {
+    "y": 4612,
+    "body": "lab(100 0 0)",
+    "center": "lab(100 0 0)"
+   },
+   {
+    "y": 5765,
+    "body": "lab(100 0 0)",
+    "center": "lab(100 0 0)"
+   },
+   {
+    "y": 6918,
+    "body": "lab(100 0 0)",
+    "center": "lab(100 0 0)"
+   },
+   {
+    "y": 8071,
+    "body": "lab(100 0 0)",
+    "center": "lab(100 0 0)"
+   },
+   {
+    "y": 9224,
+    "body": "lab(100 0 0)",
+    "center": "lab(95.604 0.426412 1.20401)"
+   },
+   {
+    "y": 10377,
+    "body": "lab(100 0 0)",
+    "center": "lab(100 0 0)"
+   },
+   {
+    "y": 11530,
+    "body": "lab(100 0 0)",
+    "center": "lab(100 0 0)"
+   },
+   {
+    "y": 12683,
+    "body": "lab(100 0 0)",
+    "center": "lab(8.86531 0.515342 0.18619)"
+   },
+   {
+    "y": 12939,
+    "body": "lab(100 0 0)",
+    "center": "lab(8.86531 0.515342 0.18619)"
+   }
+  ],
+  "info": {
+   "title": "Spend Management, Corporate Cards & Accounts Payable Solutions | Ramp",
+   "libs": {
+    "gsap": false,
+    "ScrollTrigger": false,
+    "lottie": false,
+    "lenis": false,
+    "framer": false,
+    "next": false,
+    "three": false,
+    "rive": false
+   },
+   "canvas": 9,
+   "video": 3,
+   "svgs": 30,
+   "imgs": 66,
+   "marquee": [
+    "ticker-item",
+    "ticker-item",
+    "ticker-item",
+    "ticker-item",
+    "ticker-item"
+   ],
+   "anims": [],
+   "transforms": 5512,
+   "sticky": [
+    "HEADER.fixed inset-x-0 top-0 z-header h-(--nav-height)",
+    "DIV.fixed top-0 flex h-(--nav-height) w-full flex-col justify-be",
+    "DIV.pointer-events-none fixed inset-0 top-[50px] z-overlay hidde",
+    "DIV.sticky top-[var(--nav-height)] flex h-[calc(100dvh-var(--nav",
+    "IFRAME."
+   ],
+   "h": [
+    "H1: Time is money. Save both. [Lausanne 64px]",
+    "H2: Join 85,000 of the world’s most ambitious companies growing 3.2x faster than the average A [Lausanne 28px]",
+    "H2: One platform for all of finance. | Agents for every workflow, working 24/7. [Lausanne 40px]",
+    "H2: See recommendations | for your business. [Lausanne 48px]",
+    "H2: Now sing together [Lausanne 48px]",
+    "H2: Built on the intelligence of 85k+ finance teams. | One platform for the agentic era. [Lausanne 48px]",
+    "H2: Introducing Stack by Ramp. The AI operating system built for today’s top finance teams. [Lausanne 28px]",
+    "H2: Keep your finance team focused on strategy. Let agents handle the busywork. [Lausanne 28px]",
+    "H2: AI that learns from your team. And gets smarter with every team that joins. [Lausanne 28px]",
+    "H2: Scale the team. | Shrink the paperwork. [Lausanne 48px]",
+    "H2: Set user access on autopilot. [Lausanne 28px]",
+    "H2: One platform for all your global spend. [Lausanne 28px]",
+    "H2: We've got the receipts. [Lausanne 48px]",
+    "H2: Time is money. Save both. [Lausanne 24px]"
+   ],
+   "fonts": [
+    "BUTTON:Lausanne 400",
+    "A:Lausanne 400",
+    "SPAN:Lausanne 400",
+    "P:Lausanne 400",
+    "SPAN: ",
+    "H1:Lausanne 400",
+    "H2:Lausanne 400",
+    "H3:Lausanne 400"
+   ],
+   "colors": [
+    [
+     "lab(2.83994 0.367254 0.969091)",
+     119
+    ],
+    [
+     "lab(100 0 0 / 0.6)",
+     117
+    ],
+    [
+     "lab(2.83994 0.367254 0.969091 / 0.6)",
+     89
+    ],
+    [
+     "lab(100 0 0)",
+     70
+    ],
+    [
+     "bg rgba(33, 33, 33, 0.05)",
+     14
+    ],
+    [
+     "bg lab(95.604 0.426412 1.20401)",
+     8
+    ],
+    [
+     "bg lab(100 0 0)",
+     8
+    ],
+    [
+     "bg lab(92.1406 -20.4979 84.7726)",
+     7
+    ],
+    [
+     "bg lab(8.86531 0.515342 0.18619)",
+     4
+    ],
+    [
+     "rgb(255, 255, 255)",
+     4
+    ],
+    [
+     "bg oklab(0.2145 0.00152552 0.000480294 / 0.05)",
+     4
+    ],
+    [
+     "bg rgb(255, 255, 255)",
+     3
+    ],
+    [
+     "bg rgba(255, 255, 255, 0.05)",
+     2
+    ],
+    [
+     "bg rgba(33, 33, 33, 0.2)",
+     2
+    ],
+    [
+     "",
+     1
+    ],
+    [
+     "bg ",
+     1
+    ],
+    [
+     "bg oklab(0.999998 -0.00000980496 0.0000234246 / 0.15)",
+     1
+    ]
+   ],
+   "cssVars": [
+    ":root { text-rendering: optimizelegibility; font-feature-settings: \"ss01\"; --page-theme: var(--white); --lausanne-ascent: 1866; --lausanne-descent: -410; --lausanne-units-per-em: 2048; --white-rgb: 255, 255, 255; --white-0: rgba(var(--white-rgb), 0); --white-25: rgba(var(--white-rgb), .025); --white-50: rgba(var(--white-rgb), .05); --white-100: rgba(var(--white-rgb), .1); --white-200: rgba(var(--white-rgb), .2); --white-300: rgba(var(--white-rgb), .3); --white-400: rgba(var(--white-rgb), .4); --white-500: rgba(var(--white-rgb), .5); --white-600: rgba(var(--white-rgb), .6); --white-700: rgba(var(--white-rgb), .7); --white-800: rgba(var(--white-rgb), .8); --white-900: rgba(var(--white-rgb), .9); --black-rgb: 33, 33, 33; --black-0: rgba(var(--black-rgb), 0); --black-25: rgba(var(--black-rgb), .025); --black-50: rgba(var(--black-rgb), .05); --black-100: rgba(var(--black-rgb), .1); --black-200: rgba(var(--black-rgb), .2); --black-300: rgba(var(--black-rgb), .3); --black-400: rgba(var(--black-rgb), .4); --black-500: rgba(var(--black-rgb), .5); --black-600: rgba(var(--black-rgb), .6); --black-700: rgba(var(--black-rgb), .7); --black-800: rgba(var(--black-rgb), .8); --black-900: rgba(var(-",
+    ":root { --nav-banner-height: 0px; --nav-height: calc(62px + var(--nav-banner-height)); }"
+   ]
+  },
+  "scripts": [
+   "font: https://ramp.com/_next/static/immutable/media/e506d31c18fd42e6-s.p.0k0di8efl80ld.woff2",
+   "script: https://ramp.com/_next/static/immutable/chunks/1wh09sms-ydcm.js",
+   "script: https://ramp.com/_next/static/immutable/chunks/3b2gmsp2g97g9.js",
+   "script: https://ramp.com/_next/static/immutable/chunks/0nhzmw93kj38m.js",
+   "script: https://ramp.com/_next/static/immutable/chunks/1nquxj4oow61j.js",
+   "script: https://ramp.com/_next/static/immutable/chunks/108f15unrwgxg.js",
+   "script: https://ramp.com/_next/static/immutable/chunks/turbopack-2_04ewhudzrza.js",
+   "script: https://ramp.com/_next/static/immutable/chunks/2-x_80zshippx.js",
+   "script: https://ramp.com/_next/static/immutable/chunks/17an8gyd-7o68.js",
+   "script: https://ramp.com/_next/static/immutable/chunks/3u41g56r5_2q3.js",
+   "script: https://ramp.com/_next/static/immutable/chunks/44-p6tr-mvqjr.js",
+   "script: https://ramp.com/_next/static/immutable/chunks/0-targkzva5gf.js",
+   "script: https://ramp.com/_next/static/immutable/chunks/1alh9qhi2gjy_.js",
+   "script: https://ramp.com/_next/static/immutable/chunks/3wmelakc55zzl.js",
+   "script: https://ramp.com/_next/static/immutable/chunks/2dv2pn42b8rnx.js",
+   "script: https://ramp.com/_next/static/immutable/chunks/1h-504u0re6bv.js",
+   "script: https://ramp.com/_next/static/immutable/chunks/15jf2on4_gg0q.js",
+   "script: https://ramp.com/_next/static/immutable/chunks/0jnoe26bixyrz.js",
+   "script: https://ramp.com/_next/static/immutable/chunks/2x6_7x2vcsfkx.js",
+   "script: https://ramp.com/_next/static/immutable/chunks/2ghyb9sqh_uzl.js",
+   "script: https://ramp.com/_next/static/immutable/chunks/0axp0t7jos4di.js",
+   "script: https://ramp.com/_next/static/immutable/chunks/1iswlxwitzv_r.js",
+   "script: https://ramp.com/_next/static/immutable/chunks/0fhfrn5lagcf2.js",
+   "script: https://ramp.com/_next/static/immutable/chunks/3hwb42_67h4rj.js",
+   "script: https://ramp.com/_next/static/immutable/chunks/2mlavagemfbx7.js",
+   "script: https://ramp.com/_next/static/immutable/chunks/05j3la9-on-ij.js",
+   "script: https://ramp.com/_next/static/immutable/chunks/2librxnix7v2d.js",
+   "script: https://ramp.com/_next/static/immutable/chunks/13mhn0fauvduf.js",
+   "script: https://ramp.com/_next/static/immutable/chunks/0bbgu-y04flr6.js",
+   "script: https://ramp.com/_next/static/immutable/chunks/3mswu_tvw2w8p.js",
+   "script: https://ramp.com/_next/static/immutable/chunks/44s7-3ol3hju5.js",
+   "script: https://ramp.com/_next/static/immutable/chunks/111jo3cptc7go.js",
+   "script: https://ramp.com/_next/static/immutable/chunks/2yza1s4-5-3at.js",
+   "script: https://ramp.com/_next/static/immutable/chunks/2-cc67fw--sl7.js",
+   "script: https://ramp.com/_next/static/immutable/chunks/3i__nhvm9ngp2.js",
+   "script: https://ramp.com/_next/static/immutable/chunks/3f19g8c11w4bz.js",
+   "script: https://ramp.com/_next/static/immutable/chunks/3-eyq0leo5snt.js",
+   "script: https://ramp.com/_next/static/immutable/chunks/2i-lsmgr0gyb1.js",
+   "script: https://ramp.com/_next/static/immutable/chunks/3au8ezz0q64nt.js",
+   "script: https://ramp.com/_next/static/immutable/chunks/2ds8p-8gmqbm-.js"
+  ]
+ },
+ "corgi": {
+  "H": 8615,
+  "themeLog": [
+   {
+    "y": 0,
+    "body": "rgb(246, 246, 246)",
+    "center": "rgb(255, 250, 247)"
+   },
+   {
+    "y": 900,
+    "body": "rgb(246, 246, 246)",
+    "center": "rgb(255, 250, 247)"
+   },
+   {
+    "y": 1800,
+    "body": "rgb(246, 246, 246)",
+    "center": "rgb(242, 236, 231)"
+   },
+   {
+    "y": 2700,
+    "body": "rgb(246, 246, 246)",
+    "center": "rgb(25, 25, 24)"
+   },
+   {
+    "y": 3600,
+    "body": "rgb(246, 246, 246)",
+    "center": "rgb(255, 250, 247)"
+   },
+   {
+    "y": 4500,
+    "body": "rgb(246, 246, 246)",
+    "center": "rgb(255, 250, 247)"
+   },
+   {
+    "y": 5400,
+    "body": "rgb(246, 246, 246)",
+    "center": "rgb(242, 236, 231)"
+   },
+   {
+    "y": 6300,
+    "body": "rgb(246, 246, 246)",
+    "center": "rgb(255, 250, 247)"
+   },
+   {
+    "y": 7200,
+    "body": "rgb(246, 246, 246)",
+    "center": "rgb(255, 250, 247)"
+   },
+   {
+    "y": 7717,
+    "body": "rgb(246, 246, 246)",
+    "center": "rgb(255, 250, 247)"
+   }
+  ],
+  "info": {
+   "title": "Corgi | Business Insurance & Financial Services",
+   "libs": {
+    "gsap": false,
+    "ScrollTrigger": false,
+    "lottie": false,
+    "lenis": false,
+    "framer": false,
+    "next": false,
+    "three": false,
+    "rive": false
+   },
+   "canvas": 0,
+   "video": 0,
+   "svgs": 17,
+   "imgs": 235,
+   "marquee": [
+    "PRkCNa_stickers",
+    "_8jnQOG_customerLogos",
+    "logo-carousel-track flex w-max items-center gap-20",
+    "YWanfG_logo h-[var(--logo-mobile-height)] w-[var(--logo-mobi",
+    "YWanfG_logo h-[var(--logo-mobile-height)] w-[var(--logo-mobi"
+   ],
+   "anims": [
+    "logo-scroll",
+    "MZQbSq_pressScroll"
+   ],
+   "transforms": 88,
+   "sticky": [
+    "DIV.tzYl-a_backdrop",
+    "HEADER.tzYl-a_header",
+    "SECTION.zyJYTW_banner"
+   ],
+   "h": [
+    "H2:  [f37Bolton 20px]",
+    "H2:  [f37Bolton 20px]",
+    "H2:  [f37Bolton 20px]",
+    "H2: Insurancearrow_forward [f37Bolton 20px]",
+    "H2: Claims & Administrationarrow_forward [f37Bolton 20px]",
+    "H2: Financial Products,Services, and Marketsarrow_forward [f37Bolton 20px]",
+    "H2: By industry [f37Bolton 20px]",
+    "H2: By customer [f37Bolton 20px]",
+    "H2: For Brokers [f37Bolton 20px]",
+    "H2: For Partners [f37Bolton 20px]",
+    "H2: Company [f37Bolton 20px]",
+    "H1: Financial and Risk Infrastructure for Business. | We use technology to make insurance, inves [Geist 60px]",
+    "H2: Explore our Products [Geist 42px]",
+    "H2: Built to serve at scale. [f37Bolton 42px]",
+    "H2: Get appointed with Corgi [Geist 28px]",
+    "H2: Claims management services for your program [Geist 28px]",
+    "H2: What are you looking for? [f37Bolton 42px]",
+    "H2: Insurance for your industry, serving 300,000+ customers [f37Bolton 42px]",
+    "H2: Claims From Start to Finish [Geist 42px]",
+    "H2: What customers and partners say about Corgi [Geist 42px]",
+    "H2: Get insurance, investing, and market access with Corgi [Geist 42px]",
+    "H2: We Use Cookies [Geist 16px]"
+   ],
+   "fonts": [
+    "A:Geist 400",
+    "BUTTON:Geist 500",
+    "SPAN:\"Material Symbols Sharp\" 400",
+    "A:Geist 500",
+    "SPAN:\"Material Symbols Sharp\" 500",
+    "BUTTON:Geist 400",
+    "SPAN:Geist 400",
+    "H2:f37Bolton 500",
+    "SPAN:Geist 500",
+    "SPAN:f37Bolton 500",
+    "H3:f37Bolton 500",
+    "H1:Geist 500",
+    "P:Geist 500",
+    "P:Geist 400",
+    "H2:Geist 500",
+    "H3:Geist 500"
+   ],
+   "colors": [
+    [
+     "rgb(79, 77, 76)",
+     133
+    ],
+    [
+     "rgb(113, 111, 109)",
+     118
+    ],
+    [
+     "rgb(39, 38, 37)",
+     99
+    ],
+    [
+     "rgb(49, 48, 47)",
+     51
+    ],
+    [
+     "rgb(77, 75, 74)",
+     41
+    ],
+    [
+     "rgb(25, 25, 25)",
+     27
+    ],
+    [
+     "rgb(25, 25, 24)",
+     26
+    ],
+    [
+     "bg rgb(255, 255, 255)",
+     25
+    ],
+    [
+     "rgb(255, 255, 255)",
+     23
+    ],
+    [
+     "rgb(255, 250, 247)",
+     21
+    ],
+    [
+     "bg rgb(242, 236, 231)",
+     12
+    ],
+    [
+     "rgb(99, 97, 95)",
+     12
+    ],
+    [
+     "bg rgb(255, 92, 0)",
+     10
+    ],
+    [
+     "bg rgb(42, 41, 40)",
+     8
+    ],
+    [
+     "rgb(51, 51, 51)",
+     8
+    ],
+    [
+     "rgb(136, 136, 136)",
+     6
+    ],
+    [
+     "bg rgb(228, 223, 218)",
+     5
+    ],
+    [
+     "rgb(153, 153, 153)",
+     5
+    ],
+    [
+     "rgb(210, 216, 208)",
+     3
+    ],
+    [
+     "bg rgb(240, 240, 238)",
+     3
+    ],
+    [
+     "rgb(51, 50, 49)",
+     2
+    ],
+    [
+     "bg rgb(246, 241, 236)",
+     2
+    ]
+   ],
+   "cssVars": [
+    ":root { --background: #f6f6f6; --foreground: #1d1d1d; --card: #2c2c2c; --card-foreground: #d9d9d9; --popover: #2c2c2c; --popover-foreground: #d9d9d9; --primary: #ff5c00; --primary-foreground: #fff; --secondary: #2c2c2c; --secondary-foreground: #d9d9d9; --muted: #2c2c2c; --muted-foreground: #4e4e4e; --accent: #ff5c00; --accent-foreground: #1d1d1d; --destructive: #ef4444; --destructive-foreground: #fff; --border: #2c2c2c; --input: #2c2c2c; --ring: #ff5c00; --chart-1: #ff5c00; --chart-2: #fbbf24; --chart-3: #facc15; --chart-4: #fb923c; --chart-5: #f97316; --sidebar: #1d1d1d; --sidebar-foreground: #d9d9d9; --sidebar-primary: #ff5c00; --sidebar-primary-foreground: #fff; --sidebar-accent: #ff5c00; --sidebar-accent-foreground: #1d1d1d; --sidebar-border: #2c2c2c; --sidebar-ring: #ff5c00; --radius: .5rem; --h1-font-size: 36px; --h1-line-height: 100%; --h1-tracking: -.032em; --h1-color: #191919; --h2-font-size: 28px; --h2-line-height: 100%; --h2-tracking: -.032em; --body-font-size: 14px; --body-line-height: 120%; --body-tracking: -.015em; --body-large-font-size: 18px; --body-large-line-height: 120%; --body-large-tracking: -.015em; --body-large-color: #4a4a4a; --btn-large-font-weight: 500; --",
+    ":root { --stagger-dur: .5s; --stagger-distance: 12px; --stagger-stagger: 40ms; --stagger-blur: 3px; --stagger-ease: cubic-bezier(.22,1,.36,1); }"
+   ]
+  },
+  "scripts": [
+   "font: https://corgi.com/_next/static/media/caa3a2e1cccd8315-s.p.0zr6hhvz-h9nw.woff2?dpl=dpl_FnkDuu5UgQyrs85R6Qa5iTbJ9HJx",
+   "font: https://corgi.com/_next/static/media/f37_bolton_medium-s.p.0p4v2qqdnabzl.woff2?dpl=dpl_FnkDuu5UgQyrs85R6Qa5iTbJ9HJx",
+   "font: https://corgi.com/_next/static/media/f37_bolton_regular-s.p.2uc55nq6ktmq-.woff2?dpl=dpl_FnkDuu5UgQyrs85R6Qa5iTbJ9HJx",
+   "font: https://corgi.com/fonts/material-symbols/material-symbols-sharp.woff2?v=a87c935c685e",
+   "script: https://corgi.com/_next/static/chunks/0jkalgajemhfi.js?dpl=dpl_FnkDuu5UgQyrs85R6Qa5iTbJ9HJx",
+   "script: https://corgi.com/_next/static/chunks/2jqd0dpb7brv_.js?dpl=dpl_FnkDuu5UgQyrs85R6Qa5iTbJ9HJx",
+   "script: https://corgi.com/_next/static/chunks/01drw77qw8f6x.js?dpl=dpl_FnkDuu5UgQyrs85R6Qa5iTbJ9HJx",
+   "script: https://corgi.com/_next/static/chunks/0tx9fv76dv_5b.js?dpl=dpl_FnkDuu5UgQyrs85R6Qa5iTbJ9HJx",
+   "script: https://corgi.com/_next/static/chunks/2ymd19yg-7tbs.js?dpl=dpl_FnkDuu5UgQyrs85R6Qa5iTbJ9HJx",
+   "script: https://corgi.com/_next/static/chunks/1xd690wxa4681.js?dpl=dpl_FnkDuu5UgQyrs85R6Qa5iTbJ9HJx",
+   "script: https://corgi.com/_next/static/chunks/turbopack-1byz1flvc-bu1.js?dpl=dpl_FnkDuu5UgQyrs85R6Qa5iTbJ9HJx",
+   "script: https://corgi.com/_next/static/chunks/1viqy2krxriks.js?dpl=dpl_FnkDuu5UgQyrs85R6Qa5iTbJ9HJx",
+   "script: https://corgi.com/_next/static/chunks/1dpzvd8n6r21m.js?dpl=dpl_FnkDuu5UgQyrs85R6Qa5iTbJ9HJx",
+   "script: https://corgi.com/_next/static/chunks/1smqkch1cwn02.js?dpl=dpl_FnkDuu5UgQyrs85R6Qa5iTbJ9HJx",
+   "script: https://corgi.com/_next/static/chunks/36qzch7r9y3f7.js?dpl=dpl_FnkDuu5UgQyrs85R6Qa5iTbJ9HJx",
+   "script: https://corgi.com/_next/static/chunks/0j0diy_f1-0s8.js?dpl=dpl_FnkDuu5UgQyrs85R6Qa5iTbJ9HJx",
+   "script: https://corgi.com/_next/static/chunks/1sp4760bsz390.js?dpl=dpl_FnkDuu5UgQyrs85R6Qa5iTbJ9HJx",
+   "script: https://corgi.com/_next/static/chunks/2vu806ux1jh0o.js?dpl=dpl_FnkDuu5UgQyrs85R6Qa5iTbJ9HJx",
+   "script: https://corgi.com/_next/static/chunks/0gcel1rlf7h_q.js?dpl=dpl_FnkDuu5UgQyrs85R6Qa5iTbJ9HJx",
+   "script: https://corgi.com/_next/static/chunks/0052b9_2dz0y0.js?dpl=dpl_FnkDuu5UgQyrs85R6Qa5iTbJ9HJx",
+   "script: https://corgi.com/_next/static/chunks/2_e5nzmjs_p_s.js?dpl=dpl_FnkDuu5UgQyrs85R6Qa5iTbJ9HJx",
+   "script: https://corgi.com/_next/static/chunks/25ph7_aeeio00.js?dpl=dpl_FnkDuu5UgQyrs85R6Qa5iTbJ9HJx",
+   "script: https://corgi.com/_next/static/chunks/2q5mi4le4o_g-.js?dpl=dpl_FnkDuu5UgQyrs85R6Qa5iTbJ9HJx",
+   "script: https://corgi.com/_next/static/chunks/3atv4b73-4ws3.js?dpl=dpl_FnkDuu5UgQyrs85R6Qa5iTbJ9HJx",
+   "script: https://corgi.com/_next/static/chunks/1ki_mv0jjl0r1.js?dpl=dpl_FnkDuu5UgQyrs85R6Qa5iTbJ9HJx",
+   "script: https://corgi.com/_next/static/chunks/1q2v7v190uxhe.js?dpl=dpl_FnkDuu5UgQyrs85R6Qa5iTbJ9HJx",
+   "script: https://corgi.com/_next/static/chunks/19axg0s9ibymh.js?dpl=dpl_FnkDuu5UgQyrs85R6Qa5iTbJ9HJx",
+   "script: https://corgi.com/_next/static/chunks/2jde9opygtobv.js?dpl=dpl_FnkDuu5UgQyrs85R6Qa5iTbJ9HJx",
+   "script: https://corgi.com/_next/static/chunks/2p80jf0ukicem.js?dpl=dpl_FnkDuu5UgQyrs85R6Qa5iTbJ9HJx",
+   "script: https://corgi.com/_next/static/chunks/0g8ad_do_vosh.js?dpl=dpl_FnkDuu5UgQyrs85R6Qa5iTbJ9HJx",
+   "script: https://corgi.com/_next/static/chunks/2uks66xsj26dr.js?dpl=dpl_FnkDuu5UgQyrs85R6Qa5iTbJ9HJx",
+   "script: https://insights.corgiinsure.com/array/phc_oBVuRgNQYnvcVSr5EoH4hmQXmW68Svt3oPMSgtrG529a/config.js",
+   "script: https://corgi.com/_next/static/chunks/0edpvf-3b6s81.js?dpl=dpl_FnkDuu5UgQyrs85R6Qa5iTbJ9HJx",
+   "script: https://corgi.com/_next/static/chunks/177mfyu61s1bg.js?dpl=dpl_FnkDuu5UgQyrs85R6Qa5iTbJ9HJx",
+   "script: https://corgi.com/_next/static/chunks/3nnhcgv44rpr6.js?dpl=dpl_FnkDuu5UgQyrs85R6Qa5iTbJ9HJx",
+   "script: https://corgi.com/_next/static/chunks/3juy4dhyphzhe.js?dpl=dpl_FnkDuu5UgQyrs85R6Qa5iTbJ9HJx",
+   "script: https://corgi.com/_next/static/chunks/0-uo1a0k-nzqk.js?dpl=dpl_FnkDuu5UgQyrs85R6Qa5iTbJ9HJx",
+   "script: https://js-na2.hs-scripts.com/244821378.js",
+   "script: https://app.tailorhq.ai/script/TNL1m8rETxyX9DPbTfCDzQ.js",
+   "script: https://sc.lfeeder.com/lftracker_v1_DzLR5a5bjbz8BoQ2.js"
+  ]
+ },
+ "oscar": {
+  "H": 11269,
+  "themeLog": [
+   {
+    "y": 0,
+    "body": "rgb(247, 245, 235)",
+    "center": "rgb(0, 0, 0)"
+   },
+   {
+    "y": 939,
+    "body": "rgb(247, 245, 235)",
+    "center": "rgb(0, 0, 0)"
+   },
+   {
+    "y": 1878,
+    "body": "rgb(247, 245, 235)",
+    "center": "rgb(247, 245, 235)"
+   },
+   {
+    "y": 2817,
+    "body": "rgb(247, 245, 235)",
+    "center": "rgb(247, 245, 235)"
+   },
+   {
+    "y": 3756,
+    "body": "rgb(247, 245, 235)",
+    "center": "rgb(255, 255, 255)"
+   },
+   {
+    "y": 4695,
+    "body": "rgb(247, 245, 235)",
+    "center": "rgb(247, 245, 235)"
+   },
+   {
+    "y": 5634,
+    "body": "rgb(247, 245, 235)",
+    "center": "rgb(247, 245, 235)"
+   },
+   {
+    "y": 6573,
+    "body": "rgb(247, 245, 235)",
+    "center": "rgb(247, 245, 235)"
+   },
+   {
+    "y": 7512,
+    "body": "rgb(247, 245, 235)",
+    "center": "rgb(247, 245, 235)"
+   },
+   {
+    "y": 8451,
+    "body": "rgb(247, 245, 235)",
+    "center": "rgb(247, 245, 235)"
+   },
+   {
+    "y": 9390,
+    "body": "rgb(247, 245, 235)",
+    "center": "rgb(247, 245, 235)"
+   },
+   {
+    "y": 10329,
+    "body": "rgb(247, 245, 235)",
+    "center": "rgb(79, 80, 255)"
+   },
+   {
+    "y": 10369,
+    "body": "rgb(247, 245, 235)",
+    "center": "rgb(79, 80, 255)"
+   }
+  ],
+  "info": {
+   "title": "Health insurance made for real life",
+   "libs": {
+    "gsap": false,
+    "ScrollTrigger": false,
+    "lottie": false,
+    "lenis": false,
+    "framer": false,
+    "next": false,
+    "three": false,
+    "rive": false
+   },
+   "canvas": 2,
+   "video": 0,
+   "svgs": 81,
+   "imgs": 21,
+   "marquee": [
+    "inline-flex h-full items-center rounded-md text-[color:var(-",
+    "inline-flex min-w-0 flex-1 items-center justify-center round",
+    "ot-pc-logo",
+    "ot-pc-footer-logo"
+   ],
+   "anims": [
+    "nav-reveal",
+    "hero-wordmark-out",
+    "hero-content-in"
+   ],
+   "transforms": 9,
+   "sticky": [
+    "HEADER.fixed inset-x-0 top-0 z-40",
+    "DIALOG.fixed inset-0 m-0 h-dvh max-h-none w-full max-w-none border-",
+    "DIV.bg-background hero-scrub:sticky hero-scrub:top-0 hero-scrub:",
+    "DIALOG.m-0 max-h-[90dvh] border-border p-0 text-foreground shadow-x",
+    "DIALOG.m-0 max-h-[90dvh] border-border p-0 text-foreground shadow-x",
+    "DIV.onetrust-pc-dark-filter ot-hide ot-fade-in",
+    "DIV.otPcCenter ot-hide ot-fade-in",
+    "DIV."
+   ],
+   "h": [
+    "H1:  [display 120px]",
+    "H2: All the benefits of an Oscar membership [display 71px]",
+    "H2: Get a health plan made for | Diabetes Care [display 71px]",
+    "H2: Plans for specific needs, and everyone else, too [display 36px]",
+    "H2: CHOICE Arrangements for Employers [display 71px]",
+    "H2: Open enrollment with Oscar [display 71px]",
+    "H2: What it’s actually like to have Oscar [display 71px]",
+    "H2: You’re this close to getting your health plan [display 71px]",
+    "H2: Now, some real talk on health insurance [display 71px]",
+    "H2: FOOTNOTES [\"Akkurat Mono LL\" 14px]",
+    "H2:  [sans 32px]",
+    "H2: You're leaving Oscar [sans 32px]",
+    "H2: Privacy Preference Center [display 26px]"
+   ],
+   "fonts": [
+    "A:sans 400",
+    "BUTTON:sans 400",
+    "SPAN:sans 500",
+    "SPAN:sans 400",
+    "P:display 400",
+    "A:sans 500",
+    "P:sans 400",
+    "BUTTON:sans 500",
+    "H1:display 400",
+    "A:sans 700",
+    "P:sans 500",
+    "H2:display 400",
+    "H3:sans 500",
+    "SPAN:display 400",
+    "H3:display 400",
+    "H2:\"Akkurat Mono LL\" 400",
+    "SPAN:sans 700",
+    "BUTTON:sans 700",
+    "H2:sans 500",
+    "H3:sans 700"
+   ],
+   "colors": [
+    [
+     "rgb(31, 13, 5)",
+     269
+    ],
+    [
+     "rgb(255, 255, 255)",
+     143
+    ],
+    [
+     "bg rgb(79, 80, 255)",
+     40
+    ],
+    [
+     "oklab(0.183922 0.0242862 0.0254552 / 0.8)",
+     23
+    ],
+    [
+     "rgb(79, 80, 255)",
+     19
+    ],
+    [
+     "oklab(0.183922 0.0242862 0.0254552 / 0.6)",
+     10
+    ],
+    [
+     "bg rgb(185, 186, 255)",
+     8
+    ],
+    [
+     "bg rgb(255, 255, 255)",
+     3
+    ],
+    [
+     "bg rgb(255, 151, 71)",
+     2
+    ],
+    [
+     "bg rgb(224, 219, 215)",
+     2
+    ],
+    [
+     "bg rgb(255, 174, 0)",
+     1
+    ],
+    [
+     "bg rgb(255, 107, 61)",
+     1
+    ],
+    [
+     "rgb(247, 245, 235)",
+     1
+    ],
+    [
+     "rgb(24, 24, 103)",
+     1
+    ],
+    [
+     "bg rgb(255, 223, 153)",
+     1
+    ],
+    [
+     "bg rgb(198, 232, 232)",
+     1
+    ],
+    [
+     "bg rgb(56, 96, 190)",
+     1
+    ]
+   ],
+   "cssVars": [
+    ":root { --neutral-black: #1f0d05; --neutral-white: #fff; --paper: #f2efe2; --paper-soft: #f7f5eb; --paper-dark: #e0dbd7; --paper-darker: #ccc3ba; --hotblue: #4f50ff; --hotblue-subtle: #e8e8ff; --hotblue-soft: #b9baff; --hotblue-dark: #181867; --redorange: #ff6b3d; --redorange-subtle: #ffdecc; --redorange-soft: #ff9747; --redorange-dark: #964417; --yellow: #ffae00; --yellow-subtle: #ffefcc; --yellow-soft: #ffdf99; --yellow-dark: #664600; --teal: #3fa6b4; --teal-subtle: #e7f6f6; --teal-soft: #c6e8e8; --teal-dark: #05404a; --navy: #081458; --radius: .5rem; --background: var(--paper-soft); --foreground: var(--neutral-black); --foreground-muted: #685c53; --foreground-muted-on-color: #f4f5ff; --card: var(--neutral-white); --card-foreground: var(--neutral-black); --popover: var(--neutral-white); --popover-foreground: var(--neutral-black); --primary: var(--hotblue); --primary-foreground: var(--neutral-white); --secondary: var(--paper-dark); --secondary-foreground: var(--neutral-black); --muted: var(--paper-dark); --muted-foreground: var(--neutral-black); --accent: var(--hotblue-subtle); --accent-foreground: var(--hotblue-dark); --destructive: var(--redorange); --destructive-foreground: var",
+    ":root { --theme-cta-button-hover: var(--theme-cta-foreground); }"
+   ]
+  },
+  "scripts": [
+   "font: https://www.hioscar.com/_next/static/media/heldane_display_italic.p.062c6xq5u9vg0.woff2",
+   "font: https://www.hioscar.com/_next/static/media/heldane_display_medium.p.26vw12ze6ov_t.woff2",
+   "font: https://www.hioscar.com/_next/static/media/heldane_display_regular.p.0ss4va53mmg8q.woff2",
+   "font: https://www.hioscar.com/_next/static/media/lettera_text_bold.p.3sqaqy_fykqz_.woff2",
+   "font: https://www.hioscar.com/_next/static/media/lettera_text_bold_italic.p.1-_agfp4okz-j.woff2",
+   "font: https://www.hioscar.com/_next/static/media/lettera_text_italic.p.0-h--j8ja9_vp.woff2",
+   "font: https://www.hioscar.com/_next/static/media/lettera_text_medium.p.2s4tx7kzzog1g.woff2",
+   "font: https://www.hioscar.com/_next/static/media/lettera_text_medium_italic.p.20jv3vshaj39h.woff2",
+   "font: https://www.hioscar.com/_next/static/media/lettera_text_regular.p.43vnlrw3i65ow.woff2",
+   "script: https://www.hioscar.com/_next/static/chunks/3hm-k5cdk1z5j.js",
+   "script: https://www.hioscar.com/_next/static/chunks/37dt8xwz-ou_k.js",
+   "script: https://www.hioscar.com/_next/static/chunks/2pxax-t5a0gg-.js",
+   "script: https://www.hioscar.com/_next/static/chunks/0mbwtu6pfusz3.js",
+   "script: https://www.hioscar.com/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+   "script: https://www.hioscar.com/_next/static/chunks/218gfzf1kdez_.js",
+   "script: https://www.hioscar.com/_next/static/chunks/40pdkxze324zf.js",
+   "script: https://www.hioscar.com/_next/static/chunks/37_gx0e357kzl.js",
+   "script: https://www.hioscar.com/_next/static/chunks/37p0qe7r8fkml.js",
+   "script: https://www.hioscar.com/_next/static/chunks/3jp-tjx1i4_f5.js",
+   "script: https://www.hioscar.com/_next/static/chunks/2j79x6fu_z_r8.js",
+   "script: https://www.hioscar.com/_next/static/chunks/1hz9zdref7i61.js",
+   "script: https://www.hioscar.com/_next/static/chunks/0f5kw_64j-a7p.js",
+   "script: https://www.hioscar.com/_next/static/chunks/1bt61n4ya8f5x.js",
+   "script: https://www.hioscar.com/_next/static/chunks/0a0hcvu4gt2ps.js",
+   "script: https://www.hioscar.com/_next/static/chunks/1kgufpe27g2dm.js",
+   "script: https://www.hioscar.com/_next/static/chunks/31jqr9o6ro57c.js",
+   "script: https://www.hioscar.com/_next/static/chunks/16x5t4ish0f0y.js",
+   "script: https://www.hioscar.com/_next/static/chunks/3nr9x-lcd7bd5.js",
+   "script: https://www.hioscar.com/_next/static/chunks/0xw2htkp6d1ys.js",
+   "script: https://www.hioscar.com/_next/static/chunks/2e7w6e8y8rr5y.js",
+   "script: https://www.hioscar.com/_next/static/chunks/12lg51p3w_r96.js",
+   "script: https://www.hioscar.com/_next/static/chunks/336w-mkbvoy4z.js",
+   "script: https://www.hioscar.com/_next/static/chunks/1l_5z4hoyp5zk.js",
+   "script: https://www.hioscar.com/_next/static/chunks/2upmeqe7ei9r7.js",
+   "script: https://www.hioscar.com/_next/static/chunks/398jdepxczieu.js",
+   "script: https://www.redditstatic.com/ads/pixel.js?pixel_id=a2_hnp824x32lyb",
+   "script: https://c.amazon-adsystem.com/aat/amzn.js",
+   "script: https://tracker.pixeltracker.co/pixel.js",
+   "script: https://js.adsrvr.org/up_loader.3.0.0.js",
+   "script: https://go.vipetrack.com/px.js?pxid=ba795fcb5c7d59c7d72d&url=https%3A%2F%2Fwww.hioscar.com%2F&cache_buster=1318956524"
+  ]
+ }
+}
